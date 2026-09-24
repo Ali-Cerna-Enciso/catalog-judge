@@ -1,0 +1,1438 @@
+{
+  "metadata": {
+    "domain": "retail",
+    "dataset": "favorita_demand_96.csv",
+    "dataset_sha256": "169f6e5458d91d3c2080509315b9dd8c3adc76ca7829f0b560c3562965a7bd3c",
+    "model": "code-policy",
+    "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+    "threshold_sha256": "f6bfa4af1e587066efc828bd8b43648ed9019ba3265b449096f6baacff0945a7",
+    "split": "confirmation",
+    "evaluated_at": "2026-09-23T19:32:34.383137+00:00",
+    "mock": false,
+    "backend": "code",
+    "n": 20,
+    "holdout_manifest_sha256": "392b6764e5de86e9b4adbf7c7af55642fcb9b8983275cf649ddab3d9df6967e9",
+    "confirmation_split": "holdout"
+  },
+  "summary": {
+    "domain": "retail",
+    "n": 20,
+    "requests_completed": 20,
+    "valid_responses": 20,
+    "valid_judgments": 60,
+    "expected_judgments": 60,
+    "contract_coverage": 1.0,
+    "errors": {},
+    "error_count": 0,
+    "latency_ms_mean": 0.02,
+    "latency_ms_max": 0.049,
+    "metadata": {
+      "domain": "retail",
+      "dataset": "favorita_demand_96.csv",
+      "dataset_sha256": "169f6e5458d91d3c2080509315b9dd8c3adc76ca7829f0b560c3562965a7bd3c",
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "threshold_sha256": "f6bfa4af1e587066efc828bd8b43648ed9019ba3265b449096f6baacff0945a7",
+      "split": "confirmation",
+      "evaluated_at": "2026-09-23T19:32:34.383137+00:00",
+      "mock": false,
+      "backend": "code",
+      "n": 20,
+      "holdout_manifest_sha256": "392b6764e5de86e9b4adbf7c7af55642fcb9b8983275cf649ddab3d9df6967e9",
+      "confirmation_split": "holdout"
+    },
+    "series_decision_accuracy": 1.0,
+    "handling_risk": {
+      "accuracy": 1.0,
+      "n": 20,
+      "missing_predictions": 0
+    },
+    "handling_risk_accuracy": 1.0,
+    "exception_needed": {
+      "accuracy": 1.0,
+      "n": 20,
+      "missing_predictions": 0
+    },
+    "exception_needed_accuracy": 1.0,
+    "series_decision": {
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "per_label": {
+        "include": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        "review": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 16
+        },
+        "exclude": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        }
+      },
+      "confusion": {
+        "include": {
+          "include": 3,
+          "review": 0,
+          "exclude": 0
+        },
+        "review": {
+          "include": 0,
+          "review": 16,
+          "exclude": 0
+        },
+        "exclude": {
+          "include": 0,
+          "review": 0,
+          "exclude": 1
+        }
+      }
+    },
+    "route_macro_f1": 1.0,
+    "route_confusion": {
+      "accept": {
+        "accept": 3,
+        "review": 0,
+        "block": 0
+      },
+      "review": {
+        "accept": 0,
+        "review": 16,
+        "block": 0
+      },
+      "block": {
+        "accept": 0,
+        "review": 0,
+        "block": 1
+      }
+    },
+    "warnings": [
+      "Las métricas son de un holdout pequeño; no son un benchmark de producción.",
+      "RETAIL_CODE_POLICY: estas métricas miden que el código reproduce el gold de política, no a Jev."
+    ]
+  },
+  "warnings": [
+    "Las métricas son de un holdout pequeño; no son un benchmark de producción.",
+    "RETAIL_CODE_POLICY: estas métricas miden que el código reproduce el gold de política, no a Jev."
+  ],
+  "requests": [
+    {
+      "row_id": "store_37__CELEBRATION",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": true,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 1.0,
+          "choice": "review"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "series_decision=review",
+        "demand_drop_alert_proxy_codigo",
+        "handling_risk_codigo",
+        "exception_needed_codigo"
+      ],
+      "computed": {
+        "avg_sales": 7.586105,
+        "sales_cv": 1.113641,
+        "active_day_share": 0.601544,
+        "promo_share": 0.038005,
+        "recent_vs_previous_ratio": 0.662338,
+        "demand_pattern": "declining",
+        "demand_bands": {
+          "volume": "baja",
+          "trend": "caida",
+          "presence": "media",
+          "volatility": "extrema",
+          "promo": "nula"
+        },
+        "demand_drop_alert": true,
+        "replenishment_candidate": false,
+        "series_decision": "review",
+        "handling_risk": true,
+        "exception_needed": true,
+        "route": "review",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.048,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_33__AUTOMOTIVE",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "review",
+        "expected_handling_risk": false,
+        "expected_exception_needed": true,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 1.0,
+          "choice": "review"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "series_decision=review",
+        "demand_drop_alert_proxy_codigo",
+        "exception_needed_codigo"
+      ],
+      "computed": {
+        "avg_sales": 7.69715,
+        "sales_cv": 0.626095,
+        "active_day_share": 0.983373,
+        "promo_share": 0.02791,
+        "recent_vs_previous_ratio": 0.704698,
+        "demand_pattern": "declining",
+        "demand_bands": {
+          "volume": "baja",
+          "trend": "caida",
+          "presence": "alta",
+          "volatility": "moderada",
+          "promo": "nula"
+        },
+        "demand_drop_alert": true,
+        "replenishment_candidate": false,
+        "series_decision": "review",
+        "handling_risk": false,
+        "exception_needed": true,
+        "route": "review",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.049,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_37__AUTOMOTIVE",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "review",
+        "expected_handling_risk": false,
+        "expected_exception_needed": true,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 1.0,
+          "choice": "review"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "series_decision=review",
+        "demand_drop_alert_proxy_codigo",
+        "exception_needed_codigo"
+      ],
+      "computed": {
+        "avg_sales": 4.049287,
+        "sales_cv": 0.999979,
+        "active_day_share": 0.913302,
+        "promo_share": 0.004751,
+        "recent_vs_previous_ratio": 0.710345,
+        "demand_pattern": "declining",
+        "demand_bands": {
+          "volume": "muy_baja",
+          "trend": "caida",
+          "presence": "media",
+          "volatility": "alta",
+          "promo": "nula"
+        },
+        "demand_drop_alert": true,
+        "replenishment_candidate": false,
+        "series_decision": "review",
+        "handling_risk": false,
+        "exception_needed": true,
+        "route": "review",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.021,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_35__BREAD/BAKERY",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "include",
+        "expected_handling_risk": false,
+        "expected_exception_needed": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "include",
+          "confidence": 1.0,
+          "choice": "include"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        }
+      ],
+      "route": "accept",
+      "reasons": [
+        "aceptacion_por_politica"
+      ],
+      "computed": {
+        "avg_sales": 93.004157,
+        "sales_cv": 0.390511,
+        "active_day_share": 0.997031,
+        "promo_share": 0.432304,
+        "recent_vs_previous_ratio": 1.134055,
+        "demand_pattern": "growing",
+        "demand_bands": {
+          "volume": "baja",
+          "trend": "creciente",
+          "presence": "alta",
+          "volatility": "baja",
+          "promo": "media"
+        },
+        "demand_drop_alert": false,
+        "replenishment_candidate": true,
+        "series_decision": "include",
+        "handling_risk": false,
+        "exception_needed": false,
+        "route": "accept",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.025,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_36__BREAD/BAKERY",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "include",
+        "expected_handling_risk": false,
+        "expected_exception_needed": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "include",
+          "confidence": 1.0,
+          "choice": "include"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        }
+      ],
+      "route": "accept",
+      "reasons": [
+        "aceptacion_por_politica"
+      ],
+      "computed": {
+        "avg_sales": 455.671615,
+        "sales_cv": 0.399836,
+        "active_day_share": 0.922209,
+        "promo_share": 0.442993,
+        "recent_vs_previous_ratio": 1.184145,
+        "demand_pattern": "growing",
+        "demand_bands": {
+          "volume": "media",
+          "trend": "creciente",
+          "presence": "media",
+          "volatility": "baja",
+          "promo": "media"
+        },
+        "demand_drop_alert": false,
+        "replenishment_candidate": true,
+        "series_decision": "include",
+        "handling_risk": false,
+        "exception_needed": false,
+        "route": "accept",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.017,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_33__BEAUTY",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": true,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 1.0,
+          "choice": "review"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "series_decision=review",
+        "demand_drop_alert_proxy_codigo",
+        "handling_risk_codigo",
+        "exception_needed_codigo"
+      ],
+      "computed": {
+        "avg_sales": 1.10095,
+        "sales_cv": 1.229754,
+        "active_day_share": 0.582542,
+        "promo_share": 0.06057,
+        "recent_vs_previous_ratio": 0.650943,
+        "demand_pattern": "declining",
+        "demand_bands": {
+          "volume": "muy_baja",
+          "trend": "caida",
+          "presence": "baja",
+          "volatility": "extrema",
+          "promo": "ligera"
+        },
+        "demand_drop_alert": true,
+        "replenishment_candidate": false,
+        "series_decision": "review",
+        "handling_risk": true,
+        "exception_needed": true,
+        "route": "review",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.015,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_40__BREAD/BAKERY",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "include",
+        "expected_handling_risk": false,
+        "expected_exception_needed": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "include",
+          "confidence": 1.0,
+          "choice": "include"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        }
+      ],
+      "route": "accept",
+      "reasons": [
+        "aceptacion_por_politica"
+      ],
+      "computed": {
+        "avg_sales": 363.631829,
+        "sales_cv": 0.313272,
+        "active_day_share": 0.997031,
+        "promo_share": 0.42696,
+        "recent_vs_previous_ratio": 1.161669,
+        "demand_pattern": "growing",
+        "demand_bands": {
+          "volume": "media",
+          "trend": "creciente",
+          "presence": "alta",
+          "volatility": "baja",
+          "promo": "media"
+        },
+        "demand_drop_alert": false,
+        "replenishment_candidate": true,
+        "series_decision": "include",
+        "handling_risk": false,
+        "exception_needed": false,
+        "route": "accept",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.02,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_36__BEAUTY",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": true,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 1.0,
+          "choice": "review"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "series_decision=review",
+        "demand_drop_alert_proxy_codigo",
+        "handling_risk_codigo",
+        "exception_needed_codigo"
+      ],
+      "computed": {
+        "avg_sales": 1.346793,
+        "sales_cv": 1.199584,
+        "active_day_share": 0.611639,
+        "promo_share": 0.101544,
+        "recent_vs_previous_ratio": 0.613636,
+        "demand_pattern": "declining",
+        "demand_bands": {
+          "volume": "muy_baja",
+          "trend": "caida",
+          "presence": "media",
+          "volatility": "extrema",
+          "promo": "ligera"
+        },
+        "demand_drop_alert": true,
+        "replenishment_candidate": false,
+        "series_decision": "review",
+        "handling_risk": true,
+        "exception_needed": true,
+        "route": "review",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.024,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_52__BREAD/BAKERY",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "exclude",
+        "expected_handling_risk": true,
+        "expected_exception_needed": true,
+        "expected_route": "block"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "exclude",
+          "confidence": 1.0,
+          "choice": "exclude"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        }
+      ],
+      "route": "block",
+      "reasons": [
+        "series_decision=exclude",
+        "handling_risk_codigo",
+        "exception_needed_codigo"
+      ],
+      "computed": {
+        "avg_sales": 57.910236,
+        "sales_cv": 3.746716,
+        "active_day_share": 0.070071,
+        "promo_share": 0.0481,
+        "recent_vs_previous_ratio": 1.118307,
+        "demand_pattern": "growing",
+        "demand_bands": {
+          "volume": "baja",
+          "trend": "creciente",
+          "presence": "muy_baja",
+          "volatility": "extrema",
+          "promo": "nula"
+        },
+        "demand_drop_alert": false,
+        "replenishment_candidate": false,
+        "series_decision": "exclude",
+        "handling_risk": true,
+        "exception_needed": true,
+        "route": "block",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.018,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_39__BREAD/BAKERY",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 1.0,
+          "choice": "review"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "series_decision=review",
+        "handling_risk_codigo"
+      ],
+      "computed": {
+        "avg_sales": 721.942993,
+        "sales_cv": 0.238675,
+        "active_day_share": 0.997031,
+        "promo_share": 0.510689,
+        "recent_vs_previous_ratio": 0.832107,
+        "demand_pattern": "stable",
+        "demand_bands": {
+          "volume": "alta",
+          "trend": "estable",
+          "presence": "alta",
+          "volatility": "baja",
+          "promo": "alta"
+        },
+        "demand_drop_alert": false,
+        "replenishment_candidate": false,
+        "series_decision": "review",
+        "handling_risk": true,
+        "exception_needed": false,
+        "route": "review",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.016,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_39__BEAUTY",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "review",
+        "expected_handling_risk": false,
+        "expected_exception_needed": true,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 1.0,
+          "choice": "review"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "series_decision=review",
+        "demand_drop_alert_proxy_codigo",
+        "exception_needed_codigo"
+      ],
+      "computed": {
+        "avg_sales": 3.792755,
+        "sales_cv": 0.818696,
+        "active_day_share": 0.914489,
+        "promo_share": 0.124109,
+        "recent_vs_previous_ratio": 0.739837,
+        "demand_pattern": "declining",
+        "demand_bands": {
+          "volume": "muy_baja",
+          "trend": "caida",
+          "presence": "media",
+          "volatility": "alta",
+          "promo": "ligera"
+        },
+        "demand_drop_alert": true,
+        "replenishment_candidate": false,
+        "series_decision": "review",
+        "handling_risk": false,
+        "exception_needed": true,
+        "route": "review",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.03,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_53__BEAUTY",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": true,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 1.0,
+          "choice": "review"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "series_decision=review",
+        "demand_drop_alert_proxy_codigo",
+        "handling_risk_codigo",
+        "exception_needed_codigo"
+      ],
+      "computed": {
+        "avg_sales": 3.355107,
+        "sales_cv": 1.140601,
+        "active_day_share": 0.654988,
+        "promo_share": 0.146675,
+        "recent_vs_previous_ratio": 0.688312,
+        "demand_pattern": "declining",
+        "demand_bands": {
+          "volume": "muy_baja",
+          "trend": "caida",
+          "presence": "media",
+          "volatility": "extrema",
+          "promo": "ligera"
+        },
+        "demand_drop_alert": true,
+        "replenishment_candidate": false,
+        "series_decision": "review",
+        "handling_risk": true,
+        "exception_needed": true,
+        "route": "review",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.019,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_42__DELI",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 1.0,
+          "choice": "review"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "series_decision=review",
+        "handling_risk_codigo"
+      ],
+      "computed": {
+        "avg_sales": 68.155053,
+        "sales_cv": 1.236981,
+        "active_day_share": 0.428741,
+        "promo_share": 0.321259,
+        "recent_vs_previous_ratio": 0.90864,
+        "demand_pattern": "stable",
+        "demand_bands": {
+          "volume": "baja",
+          "trend": "estable",
+          "presence": "baja",
+          "volatility": "extrema",
+          "promo": "ligera"
+        },
+        "demand_drop_alert": false,
+        "replenishment_candidate": false,
+        "series_decision": "review",
+        "handling_risk": true,
+        "exception_needed": false,
+        "route": "review",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.015,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_39__CLEANING",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 1.0,
+          "choice": "review"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "series_decision=review",
+        "handling_risk_codigo"
+      ],
+      "computed": {
+        "avg_sales": 1295.07304,
+        "sales_cv": 0.380681,
+        "active_day_share": 0.997031,
+        "promo_share": 0.533254,
+        "recent_vs_previous_ratio": 1.431231,
+        "demand_pattern": "growing",
+        "demand_bands": {
+          "volume": "alta",
+          "trend": "creciente",
+          "presence": "alta",
+          "volatility": "baja",
+          "promo": "alta"
+        },
+        "demand_drop_alert": false,
+        "replenishment_candidate": true,
+        "series_decision": "review",
+        "handling_risk": true,
+        "exception_needed": false,
+        "route": "review",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.014,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_44__DELI",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 1.0,
+          "choice": "review"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "series_decision=review",
+        "handling_risk_codigo"
+      ],
+      "computed": {
+        "avg_sales": 596.611662,
+        "sales_cv": 0.34905,
+        "active_day_share": 0.997031,
+        "promo_share": 0.508314,
+        "recent_vs_previous_ratio": 0.932883,
+        "demand_pattern": "stable",
+        "demand_bands": {
+          "volume": "media",
+          "trend": "estable",
+          "presence": "alta",
+          "volatility": "baja",
+          "promo": "alta"
+        },
+        "demand_drop_alert": false,
+        "replenishment_candidate": false,
+        "series_decision": "review",
+        "handling_risk": true,
+        "exception_needed": false,
+        "route": "review",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.013,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_35__BEVERAGES",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 1.0,
+          "choice": "review"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "series_decision=review",
+        "handling_risk_codigo"
+      ],
+      "computed": {
+        "avg_sales": 1116.998812,
+        "sales_cv": 0.545745,
+        "active_day_share": 0.997031,
+        "promo_share": 0.669834,
+        "recent_vs_previous_ratio": 1.118674,
+        "demand_pattern": "growing",
+        "demand_bands": {
+          "volume": "alta",
+          "trend": "creciente",
+          "presence": "alta",
+          "volatility": "moderada",
+          "promo": "alta"
+        },
+        "demand_drop_alert": false,
+        "replenishment_candidate": true,
+        "series_decision": "review",
+        "handling_risk": true,
+        "exception_needed": false,
+        "route": "review",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.013,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_45__DELI",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 1.0,
+          "choice": "review"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "series_decision=review",
+        "handling_risk_codigo"
+      ],
+      "computed": {
+        "avg_sales": 643.192883,
+        "sales_cv": 0.372628,
+        "active_day_share": 0.997031,
+        "promo_share": 0.522565,
+        "recent_vs_previous_ratio": 0.966502,
+        "demand_pattern": "stable",
+        "demand_bands": {
+          "volume": "media",
+          "trend": "estable",
+          "presence": "alta",
+          "volatility": "baja",
+          "promo": "alta"
+        },
+        "demand_drop_alert": false,
+        "replenishment_candidate": false,
+        "series_decision": "review",
+        "handling_risk": true,
+        "exception_needed": false,
+        "route": "review",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.012,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_36__BEVERAGES",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 1.0,
+          "choice": "review"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "series_decision=review",
+        "handling_risk_codigo"
+      ],
+      "computed": {
+        "avg_sales": 1962.102138,
+        "sales_cv": 0.590784,
+        "active_day_share": 0.922209,
+        "promo_share": 0.609857,
+        "recent_vs_previous_ratio": 1.350082,
+        "demand_pattern": "growing",
+        "demand_bands": {
+          "volume": "alta",
+          "trend": "creciente",
+          "presence": "media",
+          "volatility": "moderada",
+          "promo": "alta"
+        },
+        "demand_drop_alert": false,
+        "replenishment_candidate": true,
+        "series_decision": "review",
+        "handling_risk": true,
+        "exception_needed": false,
+        "route": "review",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.013,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_46__DELI",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 1.0,
+          "choice": "review"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "series_decision=review",
+        "handling_risk_codigo"
+      ],
+      "computed": {
+        "avg_sales": 809.362045,
+        "sales_cv": 0.395666,
+        "active_day_share": 0.997031,
+        "promo_share": 0.564727,
+        "recent_vs_previous_ratio": 1.012643,
+        "demand_pattern": "stable",
+        "demand_bands": {
+          "volume": "alta",
+          "trend": "estable",
+          "presence": "alta",
+          "volatility": "baja",
+          "promo": "alta"
+        },
+        "demand_drop_alert": false,
+        "replenishment_candidate": false,
+        "series_decision": "review",
+        "handling_risk": true,
+        "exception_needed": false,
+        "route": "review",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.012,
+      "request_id": "code-policy",
+      "error_code": null
+    },
+    {
+      "row_id": "store_40__BEVERAGES",
+      "mock": false,
+      "model": "code-policy",
+      "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+      "status": "ok",
+      "expected": {
+        "expected_series_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "series_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 1.0,
+          "choice": "review"
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 1.0,
+          "noul": 1.0
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.0,
+          "noul": 0.0
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "series_decision=review",
+        "handling_risk_codigo"
+      ],
+      "computed": {
+        "avg_sales": 2306.49228,
+        "sales_cv": 0.629125,
+        "active_day_share": 0.997031,
+        "promo_share": 0.566508,
+        "recent_vs_previous_ratio": 1.197981,
+        "demand_pattern": "growing",
+        "demand_bands": {
+          "volume": "alta",
+          "trend": "creciente",
+          "presence": "alta",
+          "volatility": "moderada",
+          "promo": "alta"
+        },
+        "demand_drop_alert": false,
+        "replenishment_candidate": true,
+        "series_decision": "review",
+        "handling_risk": true,
+        "exception_needed": false,
+        "route": "review",
+        "policy_version": "favorita-demand-policy-v4",
+        "judge": "code"
+      },
+      "latency_ms": 0.013,
+      "request_id": "code-policy",
+      "error_code": null
+    }
+  ]
+}

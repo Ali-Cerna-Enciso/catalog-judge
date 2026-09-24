@@ -1,0 +1,44 @@
+{
+  "version": "confirmation-manifest-v7",
+  "protocol": "v7",
+  "frozen_at": "2026-09-24T15:00:19.756505+00:00",
+  "model": "jev-1.13.0",
+  "jev_domains": [
+    "tickets"
+  ],
+  "code_domains": [
+    "retail"
+  ],
+  "prompt_sha256": {
+    "tickets": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+    "retail": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161"
+  },
+  "threshold_sha256": "e974fc593cc02193395f96110ae8a33e2ac8041e69efeb99bc85dedcd17a5963",
+  "datasets": {
+    "tickets": {
+      "path": "tickets/data/tickets_v7_50.csv",
+      "sha256": "d4b72c92db0540ae0a2044608822c2b39d0b7746783b6315187a45850ecaa41f",
+      "dev": 0,
+      "holdout": 0,
+      "confirmation": 50,
+      "confirmation_split": "confirmation",
+      "limit": 50
+    },
+    "retail": {
+      "path": "retail/data/favorita_demand_96.csv",
+      "sha256": "169f6e5458d91d3c2080509315b9dd8c3adc76ca7829f0b560c3562965a7bd3c",
+      "dev": 76,
+      "holdout": 20,
+      "confirmation": 0,
+      "confirmation_split": "holdout",
+      "limit": 20
+    }
+  },
+  "confirmation_split": {
+    "tickets": "confirmation",
+    "retail": "holdout"
+  },
+  "no_tuning_on_confirmation": true,
+  "no_tuning_on_holdout": true,
+  "note": "Tickets confirmation = lote nuevo rubricado v2 con columnas expected_ambiguous/expected_contradictory. Corte is_ambiguous 0.85 (candidato post-hoc de v6, una sola medición). No se re-miden v4/v5/v6. Retail es política de código."
+}

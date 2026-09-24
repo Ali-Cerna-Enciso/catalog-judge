@@ -1,0 +1,27 @@
+{
+  "version": "holdout-manifest-v1",
+  "frozen_at": "2026-09-23T19:06:38.625566+00:00",
+  "model": "jev-1.13.0",
+  "prompt_sha256": {
+    "tickets": "53c0e99d47e10d91db2289342fb5592583a28cbf98ea56cdc33ca59f460c7f7d",
+    "retail": "4c189eb2af8a413ae9c24970977232706573cfcce2a61d243b7dece7ed509a01"
+  },
+  "threshold_sha256": "f6bfa4af1e587066efc828bd8b43648ed9019ba3265b449096f6baacff0945a7",
+  "datasets": {
+    "tickets": {
+      "path": "tickets/data/tickets_100.csv",
+      "sha256": "e8cfdf24c13f89f9b120ccda9dcd1d28b9c4c0c45114ddfba41ae4add2d91a96",
+      "dev": 50,
+      "holdout": 50,
+      "limit": 50
+    },
+    "retail": {
+      "path": "retail/data/favorita_demand_96.csv",
+      "sha256": "169f6e5458d91d3c2080509315b9dd8c3adc76ca7829f0b560c3562965a7bd3c",
+      "dev": 76,
+      "holdout": 20,
+      "limit": 20
+    }
+  },
+  "no_tuning_on_holdout": true
+}

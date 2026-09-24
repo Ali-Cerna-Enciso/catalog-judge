@@ -1,0 +1,44 @@
+{
+  "version": "confirmation-manifest-v6",
+  "protocol": "v6",
+  "frozen_at": "2026-09-23T23:14:06.404688+00:00",
+  "model": "jev-1.13.0",
+  "jev_domains": [
+    "tickets"
+  ],
+  "code_domains": [
+    "retail"
+  ],
+  "prompt_sha256": {
+    "tickets": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+    "retail": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161"
+  },
+  "threshold_sha256": "d634432e182f25b6f51f333cef7a362d549a13fec65841f2a1963f74d7f7736f",
+  "datasets": {
+    "tickets": {
+      "path": "tickets/data/tickets_v6_50.csv",
+      "sha256": "52812a89ba40c36fa6455f24c88734763a7b9282afbf480dda4ba9fa0954bb18",
+      "dev": 0,
+      "holdout": 0,
+      "confirmation": 50,
+      "confirmation_split": "confirmation",
+      "limit": 50
+    },
+    "retail": {
+      "path": "retail/data/favorita_demand_96.csv",
+      "sha256": "169f6e5458d91d3c2080509315b9dd8c3adc76ca7829f0b560c3562965a7bd3c",
+      "dev": 76,
+      "holdout": 20,
+      "confirmation": 0,
+      "confirmation_split": "holdout",
+      "limit": 20
+    }
+  },
+  "confirmation_split": {
+    "tickets": "confirmation",
+    "retail": "holdout"
+  },
+  "no_tuning_on_confirmation": true,
+  "no_tuning_on_holdout": true,
+  "note": "Tickets confirmation = lote nuevo rubricado v2 con contrato de 10 preguntas (3 señales humanas). No se re-miden los lotes v4 (100) ni v5 (50). Retail es política de código."
+}

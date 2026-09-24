@@ -1,0 +1,1183 @@
+{
+  "metadata": {
+    "domain": "retail",
+    "dataset": "favorita_catalog_96.csv",
+    "dataset_sha256": "871b2d7d1c6ddf81dd458f5dcbbd7680a7ab3050fe916ced954eee07260f867f",
+    "model": "jev-1.13.0",
+    "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+    "threshold_sha256": "24b3d9095a982ee0237797b2596545bf7f45aebf73c381faa45244950a6b9bdc",
+    "split": "holdout",
+    "evaluated_at": "2026-09-23T17:45:10.454360+00:00",
+    "mock": false,
+    "n": 20,
+    "holdout_manifest_sha256": "8bff3455ce6fea779ebf7ae6919201c3819d28f04b64ab16a4bdb31366cb81bf"
+  },
+  "summary": {
+    "domain": "retail",
+    "n": 20,
+    "requests_completed": 20,
+    "valid_responses": 20,
+    "valid_judgments": 60,
+    "expected_judgments": 60,
+    "contract_coverage": 1.0,
+    "errors": {},
+    "error_count": 0,
+    "latency_ms_mean": 505.848,
+    "latency_ms_max": 896.807,
+    "metadata": {
+      "domain": "retail",
+      "dataset": "favorita_catalog_96.csv",
+      "dataset_sha256": "871b2d7d1c6ddf81dd458f5dcbbd7680a7ab3050fe916ced954eee07260f867f",
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "threshold_sha256": "24b3d9095a982ee0237797b2596545bf7f45aebf73c381faa45244950a6b9bdc",
+      "split": "holdout",
+      "evaluated_at": "2026-09-23T17:45:10.454360+00:00",
+      "mock": false,
+      "n": 20,
+      "holdout_manifest_sha256": "8bff3455ce6fea779ebf7ae6919201c3819d28f04b64ab16a4bdb31366cb81bf"
+    },
+    "catalog_decision_accuracy": 0.4,
+    "handling_risk": {
+      "accuracy": 0.3,
+      "n": 20,
+      "missing_predictions": 0
+    },
+    "handling_risk_accuracy": 0.3,
+    "exception_needed": {
+      "accuracy": 0.6,
+      "n": 20,
+      "missing_predictions": 0
+    },
+    "exception_needed_accuracy": 0.6,
+    "catalog_decision": {
+      "accuracy": 0.4,
+      "macro_precision": 0.4102564102564103,
+      "macro_recall": 0.4375,
+      "macro_f1": 0.2837301587301587,
+      "per_label": {
+        "include": {
+          "precision": 0.23076923076923078,
+          "recall": 1.0,
+          "f1": 0.375,
+          "support": 3
+        },
+        "review": {
+          "precision": 1.0,
+          "recall": 0.3125,
+          "f1": 0.47619047619047616,
+          "support": 16
+        },
+        "exclude": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1
+        }
+      },
+      "confusion": {
+        "include": {
+          "include": 3,
+          "review": 0,
+          "exclude": 0
+        },
+        "review": {
+          "include": 9,
+          "review": 5,
+          "exclude": 2
+        },
+        "exclude": {
+          "include": 1,
+          "review": 0,
+          "exclude": 0
+        }
+      }
+    },
+    "route_macro_f1": 0.28484848484848485,
+    "route_confusion": {
+      "accept": {
+        "accept": 3,
+        "review": 0,
+        "block": 0
+      },
+      "review": {
+        "accept": 9,
+        "review": 5,
+        "block": 2
+      },
+      "block": {
+        "accept": 0,
+        "review": 1,
+        "block": 0
+      }
+    },
+    "warnings": [
+      "Las métricas son de un holdout pequeño; no son un benchmark de producción."
+    ]
+  },
+  "warnings": [
+    "Las métricas son de un holdout pequeño; no son un benchmark de producción."
+  ],
+  "requests": [
+    {
+      "row_id": "store_37__CELEBRATION",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": true,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "exclude",
+          "confidence": 0.45,
+          "choice": "exclude",
+          "probabilities": {
+            "include": 0.0,
+            "review": 0.37,
+            "exclude": 0.63
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.45,
+          "noul": 0.45
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.58,
+          "noul": 0.58
+        }
+      ],
+      "route": "block",
+      "computed": {
+        "avg_sales": 7.586105,
+        "sales_cv": 1.113641,
+        "active_day_share": 0.601544,
+        "promo_share": 0.038005,
+        "recent_vs_previous_ratio": 0.662338,
+        "demand_pattern": "declining",
+        "demand_drop_alert": true,
+        "replenishment_candidate": false
+      },
+      "latency_ms": 634.576,
+      "request_id": "req_01a0cf606ff37eebb4446fabf1f8c839",
+      "error_code": null
+    },
+    {
+      "row_id": "store_33__AUTOMOTIVE",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "review",
+        "expected_handling_risk": false,
+        "expected_exception_needed": true,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 0.41,
+          "choice": "review",
+          "probabilities": {
+            "include": 0.0,
+            "review": 0.61,
+            "exclude": 0.39
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.41,
+          "noul": 0.41
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.59,
+          "noul": 0.59
+        }
+      ],
+      "route": "review",
+      "computed": {
+        "avg_sales": 7.69715,
+        "sales_cv": 0.626095,
+        "active_day_share": 0.983373,
+        "promo_share": 0.02791,
+        "recent_vs_previous_ratio": 0.704698,
+        "demand_pattern": "declining",
+        "demand_drop_alert": true,
+        "replenishment_candidate": false
+      },
+      "latency_ms": 896.807,
+      "request_id": "req_01a0cf6070e179c3a3e66b8dbe485949",
+      "error_code": null
+    },
+    {
+      "row_id": "store_37__AUTOMOTIVE",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "review",
+        "expected_handling_risk": false,
+        "expected_exception_needed": true,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 0.36,
+          "choice": "review",
+          "probabilities": {
+            "include": 0.0,
+            "review": 0.58,
+            "exclude": 0.42
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.44,
+          "noul": 0.44
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.54,
+          "noul": 0.54
+        }
+      ],
+      "route": "review",
+      "computed": {
+        "avg_sales": 4.049287,
+        "sales_cv": 0.999979,
+        "active_day_share": 0.913302,
+        "promo_share": 0.004751,
+        "recent_vs_previous_ratio": 0.710345,
+        "demand_pattern": "declining",
+        "demand_drop_alert": true,
+        "replenishment_candidate": false
+      },
+      "latency_ms": 620.202,
+      "request_id": "req_01a0cf606ffa775da34dead5c28c7e04",
+      "error_code": null
+    },
+    {
+      "row_id": "store_35__BREAD/BAKERY",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "include",
+        "expected_handling_risk": false,
+        "expected_exception_needed": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "include",
+          "confidence": 0.85,
+          "choice": "include",
+          "probabilities": {
+            "include": 0.91,
+            "review": 0.09,
+            "exclude": 0.0
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.21,
+          "noul": 0.21
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.17,
+          "noul": 0.17
+        }
+      ],
+      "route": "accept",
+      "computed": {
+        "avg_sales": 93.004157,
+        "sales_cv": 0.390511,
+        "active_day_share": 0.997031,
+        "promo_share": 0.432304,
+        "recent_vs_previous_ratio": 1.134055,
+        "demand_pattern": "growing",
+        "demand_drop_alert": false,
+        "replenishment_candidate": true
+      },
+      "latency_ms": 893.928,
+      "request_id": "req_01a0cf6070e37240b7d6d225f433c3fe",
+      "error_code": null
+    },
+    {
+      "row_id": "store_36__BREAD/BAKERY",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "include",
+        "expected_handling_risk": false,
+        "expected_exception_needed": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "include",
+          "confidence": 0.86,
+          "choice": "include",
+          "probabilities": {
+            "review": 0.09,
+            "exclude": 0.0,
+            "include": 0.91
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.23,
+          "noul": 0.23
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.18,
+          "noul": 0.18
+        }
+      ],
+      "route": "accept",
+      "computed": {
+        "avg_sales": 455.671615,
+        "sales_cv": 0.399836,
+        "active_day_share": 0.922209,
+        "promo_share": 0.442993,
+        "recent_vs_previous_ratio": 1.184145,
+        "demand_pattern": "growing",
+        "demand_drop_alert": false,
+        "replenishment_candidate": true
+      },
+      "latency_ms": 895.719,
+      "request_id": "req_01a0cf6070e17ac28c5b99bb6a14e819",
+      "error_code": null
+    },
+    {
+      "row_id": "store_33__BEAUTY",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": true,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "exclude",
+          "confidence": 0.27,
+          "choice": "exclude",
+          "probabilities": {
+            "review": 0.49,
+            "exclude": 0.51,
+            "include": 0.0
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.46,
+          "noul": 0.46
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.58,
+          "noul": 0.58
+        }
+      ],
+      "route": "block",
+      "computed": {
+        "avg_sales": 1.10095,
+        "sales_cv": 1.229754,
+        "active_day_share": 0.582542,
+        "promo_share": 0.06057,
+        "recent_vs_previous_ratio": 0.650943,
+        "demand_pattern": "declining",
+        "demand_drop_alert": true,
+        "replenishment_candidate": false
+      },
+      "latency_ms": 510.498,
+      "request_id": "req_01a0cf606fc776368509986cd411475e",
+      "error_code": null
+    },
+    {
+      "row_id": "store_40__BREAD/BAKERY",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "include",
+        "expected_handling_risk": false,
+        "expected_exception_needed": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "include",
+          "confidence": 0.86,
+          "choice": "include",
+          "probabilities": {
+            "exclude": 0.0,
+            "include": 0.91,
+            "review": 0.09
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.21,
+          "noul": 0.21
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.17,
+          "noul": 0.17
+        }
+      ],
+      "route": "accept",
+      "computed": {
+        "avg_sales": 363.631829,
+        "sales_cv": 0.313272,
+        "active_day_share": 0.997031,
+        "promo_share": 0.42696,
+        "recent_vs_previous_ratio": 1.161669,
+        "demand_pattern": "growing",
+        "demand_drop_alert": false,
+        "replenishment_candidate": true
+      },
+      "latency_ms": 652.943,
+      "request_id": "req_01a0cf606ff470a4b6b6f2ef2fd4b256",
+      "error_code": null
+    },
+    {
+      "row_id": "store_36__BEAUTY",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": true,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 0.34,
+          "choice": "review",
+          "probabilities": {
+            "exclude": 0.44,
+            "include": 0.0,
+            "review": 0.56
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.46,
+          "noul": 0.46
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.58,
+          "noul": 0.58
+        }
+      ],
+      "route": "review",
+      "computed": {
+        "avg_sales": 1.346793,
+        "sales_cv": 1.199584,
+        "active_day_share": 0.611639,
+        "promo_share": 0.101544,
+        "recent_vs_previous_ratio": 0.613636,
+        "demand_pattern": "declining",
+        "demand_drop_alert": true,
+        "replenishment_candidate": false
+      },
+      "latency_ms": 632.359,
+      "request_id": "req_01a0cf6070267cc5910bdba609742302",
+      "error_code": null
+    },
+    {
+      "row_id": "store_52__BREAD/BAKERY",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "exclude",
+        "expected_handling_risk": true,
+        "expected_exception_needed": true,
+        "expected_route": "block"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "include",
+          "confidence": 0.3,
+          "choice": "include",
+          "probabilities": {
+            "review": 0.24,
+            "include": 0.54,
+            "exclude": 0.22
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.39,
+          "noul": 0.39
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.23,
+          "noul": 0.23
+        }
+      ],
+      "route": "review",
+      "computed": {
+        "avg_sales": 57.910236,
+        "sales_cv": 3.746716,
+        "active_day_share": 0.070071,
+        "promo_share": 0.0481,
+        "recent_vs_previous_ratio": 1.118307,
+        "demand_pattern": "growing",
+        "demand_drop_alert": false,
+        "replenishment_candidate": false
+      },
+      "latency_ms": 357.58,
+      "request_id": "req_01a0cf60712076abac7e9bee7f59c9f0",
+      "error_code": null
+    },
+    {
+      "row_id": "store_39__BREAD/BAKERY",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "include",
+          "confidence": 0.87,
+          "choice": "include",
+          "probabilities": {
+            "exclude": 0.01,
+            "include": 0.91,
+            "review": 0.08
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.18,
+          "noul": 0.18
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.13,
+          "noul": 0.13
+        }
+      ],
+      "route": "accept",
+      "computed": {
+        "avg_sales": 721.942993,
+        "sales_cv": 0.238675,
+        "active_day_share": 0.997031,
+        "promo_share": 0.510689,
+        "recent_vs_previous_ratio": 0.832107,
+        "demand_pattern": "stable",
+        "demand_drop_alert": false,
+        "replenishment_candidate": false
+      },
+      "latency_ms": 315.995,
+      "request_id": "req_01a0cf6071807cf39006e58f17c06771",
+      "error_code": null
+    },
+    {
+      "row_id": "store_39__BEAUTY",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "review",
+        "expected_handling_risk": false,
+        "expected_exception_needed": true,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 0.46,
+          "choice": "review",
+          "probabilities": {
+            "exclude": 0.36,
+            "include": 0.0,
+            "review": 0.64
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.43,
+          "noul": 0.43
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.57,
+          "noul": 0.57
+        }
+      ],
+      "route": "review",
+      "computed": {
+        "avg_sales": 3.792755,
+        "sales_cv": 0.818696,
+        "active_day_share": 0.914489,
+        "promo_share": 0.124109,
+        "recent_vs_previous_ratio": 0.739837,
+        "demand_pattern": "declining",
+        "demand_drop_alert": true,
+        "replenishment_candidate": false
+      },
+      "latency_ms": 369.604,
+      "request_id": "req_01a0cf60718e7d879d41cfb4b88973da",
+      "error_code": null
+    },
+    {
+      "row_id": "store_53__BEAUTY",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": true,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "review",
+          "confidence": 0.35,
+          "choice": "review",
+          "probabilities": {
+            "include": 0.0,
+            "review": 0.57,
+            "exclude": 0.43
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.44,
+          "noul": 0.44
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.56,
+          "noul": 0.56
+        }
+      ],
+      "route": "review",
+      "computed": {
+        "avg_sales": 3.355107,
+        "sales_cv": 1.140601,
+        "active_day_share": 0.654988,
+        "promo_share": 0.146675,
+        "recent_vs_previous_ratio": 0.688312,
+        "demand_pattern": "declining",
+        "demand_drop_alert": true,
+        "replenishment_candidate": false
+      },
+      "latency_ms": 365.291,
+      "request_id": "req_01a0cf60718f7ffb8409acf690d7e9ee",
+      "error_code": null
+    },
+    {
+      "row_id": "store_42__DELI",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "include",
+          "confidence": 0.75,
+          "choice": "include",
+          "probabilities": {
+            "exclude": 0.06,
+            "include": 0.83,
+            "review": 0.11
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.22,
+          "noul": 0.22
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.17,
+          "noul": 0.17
+        }
+      ],
+      "route": "accept",
+      "computed": {
+        "avg_sales": 68.155053,
+        "sales_cv": 1.236981,
+        "active_day_share": 0.428741,
+        "promo_share": 0.321259,
+        "recent_vs_previous_ratio": 0.90864,
+        "demand_pattern": "stable",
+        "demand_drop_alert": false,
+        "replenishment_candidate": false
+      },
+      "latency_ms": 341.745,
+      "request_id": "req_01a0cf6071ac713d9c55c7f170196426",
+      "error_code": null
+    },
+    {
+      "row_id": "store_39__CLEANING",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "include",
+          "confidence": 0.9,
+          "choice": "include",
+          "probabilities": {
+            "exclude": 0.0,
+            "include": 0.93,
+            "review": 0.07
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.18,
+          "noul": 0.18
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.18,
+          "noul": 0.18
+        }
+      ],
+      "route": "accept",
+      "computed": {
+        "avg_sales": 1295.07304,
+        "sales_cv": 0.380681,
+        "active_day_share": 0.997031,
+        "promo_share": 0.533254,
+        "recent_vs_previous_ratio": 1.431231,
+        "demand_pattern": "growing",
+        "demand_drop_alert": false,
+        "replenishment_candidate": true
+      },
+      "latency_ms": 330.125,
+      "request_id": "req_01a0cf60727f71e0b43b601eb8beac8b",
+      "error_code": null
+    },
+    {
+      "row_id": "store_44__DELI",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "include",
+          "confidence": 0.95,
+          "choice": "include",
+          "probabilities": {
+            "exclude": 0.01,
+            "include": 0.96,
+            "review": 0.03
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.13,
+          "noul": 0.13
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.13,
+          "noul": 0.13
+        }
+      ],
+      "route": "accept",
+      "computed": {
+        "avg_sales": 596.611662,
+        "sales_cv": 0.34905,
+        "active_day_share": 0.997031,
+        "promo_share": 0.508314,
+        "recent_vs_previous_ratio": 0.932883,
+        "demand_pattern": "stable",
+        "demand_drop_alert": false,
+        "replenishment_candidate": false
+      },
+      "latency_ms": 393.984,
+      "request_id": "req_01a0cf60729a7de4886c42f5d0583af9",
+      "error_code": null
+    },
+    {
+      "row_id": "store_35__BEVERAGES",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "include",
+          "confidence": 0.8,
+          "choice": "include",
+          "probabilities": {
+            "review": 0.13,
+            "exclude": 0.0,
+            "include": 0.87
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.17,
+          "noul": 0.17
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.18,
+          "noul": 0.18
+        }
+      ],
+      "route": "accept",
+      "computed": {
+        "avg_sales": 1116.998812,
+        "sales_cv": 0.545745,
+        "active_day_share": 0.997031,
+        "promo_share": 0.669834,
+        "recent_vs_previous_ratio": 1.118674,
+        "demand_pattern": "growing",
+        "demand_drop_alert": false,
+        "replenishment_candidate": true
+      },
+      "latency_ms": 470.31,
+      "request_id": "req_01a0cf6072977fb582031469dfe43953",
+      "error_code": null
+    },
+    {
+      "row_id": "store_45__DELI",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "include",
+          "confidence": 0.96,
+          "choice": "include",
+          "probabilities": {
+            "exclude": 0.0,
+            "include": 0.97,
+            "review": 0.03
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.12,
+          "noul": 0.12
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.11,
+          "noul": 0.11
+        }
+      ],
+      "route": "accept",
+      "computed": {
+        "avg_sales": 643.192883,
+        "sales_cv": 0.372628,
+        "active_day_share": 0.997031,
+        "promo_share": 0.522565,
+        "recent_vs_previous_ratio": 0.966502,
+        "demand_pattern": "stable",
+        "demand_drop_alert": false,
+        "replenishment_candidate": false
+      },
+      "latency_ms": 329.117,
+      "request_id": "req_01a0cf60729872f6b86a129a63d7a2bc",
+      "error_code": null
+    },
+    {
+      "row_id": "store_36__BEVERAGES",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "include",
+          "confidence": 0.79,
+          "choice": "include",
+          "probabilities": {
+            "include": 0.87,
+            "exclude": 0.0,
+            "review": 0.13
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.21,
+          "noul": 0.21
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.18,
+          "noul": 0.18
+        }
+      ],
+      "route": "accept",
+      "computed": {
+        "avg_sales": 1962.102138,
+        "sales_cv": 0.590784,
+        "active_day_share": 0.922209,
+        "promo_share": 0.609857,
+        "recent_vs_previous_ratio": 1.350082,
+        "demand_pattern": "growing",
+        "demand_drop_alert": false,
+        "replenishment_candidate": true
+      },
+      "latency_ms": 370.912,
+      "request_id": "req_01a0cf6072cb77d39781a061ce84e19c",
+      "error_code": null
+    },
+    {
+      "row_id": "store_46__DELI",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "include",
+          "confidence": 0.97,
+          "choice": "include",
+          "probabilities": {
+            "exclude": 0.0,
+            "include": 0.98,
+            "review": 0.02
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.12,
+          "noul": 0.12
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.11,
+          "noul": 0.11
+        }
+      ],
+      "route": "accept",
+      "computed": {
+        "avg_sales": 809.362045,
+        "sales_cv": 0.395666,
+        "active_day_share": 0.997031,
+        "promo_share": 0.564727,
+        "recent_vs_previous_ratio": 1.012643,
+        "demand_pattern": "stable",
+        "demand_drop_alert": false,
+        "replenishment_candidate": false
+      },
+      "latency_ms": 324.273,
+      "request_id": "req_01a0cf6072fc7bd7adc44117321b542b",
+      "error_code": null
+    },
+    {
+      "row_id": "store_40__BEVERAGES",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "051a073429359edb4e0dbf91053cf0b69fb74694b7f52f4cf4b34275aa188a04",
+      "status": "ok",
+      "expected": {
+        "expected_catalog_decision": "review",
+        "expected_handling_risk": true,
+        "expected_exception_needed": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "catalog_decision",
+          "kind": "choice",
+          "value": "include",
+          "confidence": 0.81,
+          "choice": "include",
+          "probabilities": {
+            "exclude": 0.0,
+            "review": 0.12,
+            "include": 0.88
+          }
+        },
+        {
+          "question_id": "handling_risk",
+          "kind": "noul",
+          "value": 0.18,
+          "noul": 0.18
+        },
+        {
+          "question_id": "exception_needed",
+          "kind": "noul",
+          "value": 0.21,
+          "noul": 0.21
+        }
+      ],
+      "route": "accept",
+      "computed": {
+        "avg_sales": 2306.49228,
+        "sales_cv": 0.629125,
+        "active_day_share": 0.997031,
+        "promo_share": 0.566508,
+        "recent_vs_previous_ratio": 1.197981,
+        "demand_pattern": "growing",
+        "demand_drop_alert": false,
+        "replenishment_candidate": true
+      },
+      "latency_ms": 410.985,
+      "request_id": "req_01a0cf60730a72a9818e4a1a4ca88569",
+      "error_code": null
+    }
+  ]
+}

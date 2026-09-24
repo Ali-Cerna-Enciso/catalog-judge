@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="300" viewBox="0 0 720 300" role="img" aria-label="Exactitud por dimensión en tickets">
+  <rect width="720" height="300" fill="#f7f6f3"/>
+  <text x="24" y="32" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#1d2a32">Qué acierta hoy, en 50 tickets</text>
+  <text x="24" y="54" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#5c6b73">Jev 1.13.0 · 50/50 respuestas válidas · 0 errores · ~611 ms por fila</text>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#1d2a32">
+    <text x="24" y="92">Área</text>
+    <rect x="160" y="76" width="387" height="20" rx="4" fill="#2a6f7a"/>
+    <text x="555" y="92" font-weight="700">88%</text>
+    <text x="24" y="124">Intención</text>
+    <rect x="160" y="108" width="378" height="20" rx="4" fill="#2a6f7a"/>
+    <text x="546" y="124" font-weight="700">86%</text>
+    <text x="24" y="156">¿Humano?</text>
+    <rect x="160" y="140" width="431" height="20" rx="4" fill="#1f6f4a"/>
+    <text x="599" y="156" font-weight="700">98%</text>
+    <text x="24" y="188">Urgencia</text>
+    <rect x="160" y="172" width="317" height="20" rx="4" fill="#c47b4a"/>
+    <text x="485" y="188" font-weight="700">72%</text>
+    <text x="24" y="220">Reembolso / seguridad / repro</text>
+    <rect x="160" y="204" width="440" height="20" rx="4" fill="#1f6f4a"/>
+    <text x="608" y="220" font-weight="700">98100%</text>
+    <text x="24" y="252">Acción (nivel vecino)</text>
+    <rect x="160" y="236" width="387" height="20" rx="4" fill="#2a6f7a"/>
+    <text x="555" y="252" font-weight="700">88%</text>
+  </g>
+  <text x="24" y="286" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#5c6b73">Urgencia es la dimensión más blanda: describe la situación, no la emoción del mensaje.</text>
+</svg>

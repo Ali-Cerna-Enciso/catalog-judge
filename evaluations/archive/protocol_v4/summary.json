@@ -1,0 +1,540 @@
+{
+  "updated_at": "2026-09-23T19:33:11.529923+00:00",
+  "runs": [
+    {
+      "file": "retail_live_20.json",
+      "metadata": {
+        "domain": "retail",
+        "dataset": "favorita_demand_96.csv",
+        "dataset_sha256": "169f6e5458d91d3c2080509315b9dd8c3adc76ca7829f0b560c3562965a7bd3c",
+        "model": "code-policy",
+        "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+        "threshold_sha256": "f6bfa4af1e587066efc828bd8b43648ed9019ba3265b449096f6baacff0945a7",
+        "split": "confirmation",
+        "evaluated_at": "2026-09-23T19:32:34.383137+00:00",
+        "mock": false,
+        "backend": "code",
+        "n": 20,
+        "holdout_manifest_sha256": "901216e817785c61c983360421fcc54713a6080e71758b4003021d25ea560410",
+        "confirmation_split": "holdout"
+      },
+      "summary": {
+        "domain": "retail",
+        "n": 20,
+        "requests_completed": 20,
+        "valid_responses": 20,
+        "valid_judgments": 60,
+        "expected_judgments": 60,
+        "contract_coverage": 1.0,
+        "errors": {},
+        "error_count": 0,
+        "latency_ms_mean": 0.02,
+        "latency_ms_max": 0.049,
+        "metadata": {
+          "domain": "retail",
+          "dataset": "favorita_demand_96.csv",
+          "dataset_sha256": "169f6e5458d91d3c2080509315b9dd8c3adc76ca7829f0b560c3562965a7bd3c",
+          "model": "code-policy",
+          "prompt_sha256": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161",
+          "threshold_sha256": "f6bfa4af1e587066efc828bd8b43648ed9019ba3265b449096f6baacff0945a7",
+          "split": "confirmation",
+          "evaluated_at": "2026-09-23T19:32:34.383137+00:00",
+          "mock": false,
+          "backend": "code",
+          "n": 20,
+          "holdout_manifest_sha256": "901216e817785c61c983360421fcc54713a6080e71758b4003021d25ea560410",
+          "confirmation_split": "holdout"
+        },
+        "series_decision_accuracy": 1.0,
+        "handling_risk": {
+          "accuracy": 1.0,
+          "n": 20,
+          "missing_predictions": 0
+        },
+        "handling_risk_accuracy": 1.0,
+        "exception_needed": {
+          "accuracy": 1.0,
+          "n": 20,
+          "missing_predictions": 0
+        },
+        "exception_needed_accuracy": 1.0,
+        "series_decision": {
+          "accuracy": 1.0,
+          "macro_precision": 1.0,
+          "macro_recall": 1.0,
+          "macro_f1": 1.0,
+          "per_label": {
+            "include": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 3
+            },
+            "review": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 16
+            },
+            "exclude": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            }
+          },
+          "confusion": {
+            "include": {
+              "include": 3,
+              "review": 0,
+              "exclude": 0
+            },
+            "review": {
+              "include": 0,
+              "review": 16,
+              "exclude": 0
+            },
+            "exclude": {
+              "include": 0,
+              "review": 0,
+              "exclude": 1
+            }
+          }
+        },
+        "route_macro_f1": 1.0,
+        "route_confusion": {
+          "accept": {
+            "accept": 3,
+            "review": 0,
+            "block": 0
+          },
+          "review": {
+            "accept": 0,
+            "review": 16,
+            "block": 0
+          },
+          "block": {
+            "accept": 0,
+            "review": 0,
+            "block": 1
+          }
+        },
+        "warnings": [
+          "Las métricas son de un holdout pequeño; no son un benchmark de producción.",
+          "RETAIL_CODE_POLICY: estas métricas miden que el código reproduce el gold de política, no a Jev."
+        ]
+      }
+    },
+    {
+      "file": "tickets_live_50.json",
+      "metadata": {
+        "domain": "tickets",
+        "dataset": "tickets_100.csv",
+        "dataset_sha256": "e8cfdf24c13f89f9b120ccda9dcd1d28b9c4c0c45114ddfba41ae4add2d91a96",
+        "model": "jev-1.13.0",
+        "prompt_sha256": "53c0e99d47e10d91db2289342fb5592583a28cbf98ea56cdc33ca59f460c7f7d",
+        "threshold_sha256": "f6bfa4af1e587066efc828bd8b43648ed9019ba3265b449096f6baacff0945a7",
+        "split": "confirmation",
+        "evaluated_at": "2026-09-23T19:33:11.529923+00:00",
+        "mock": false,
+        "backend": "jev",
+        "n": 50,
+        "holdout_manifest_sha256": "901216e817785c61c983360421fcc54713a6080e71758b4003021d25ea560410",
+        "confirmation_split": "dev"
+      },
+      "summary": {
+        "domain": "tickets",
+        "n": 50,
+        "requests_completed": 50,
+        "valid_responses": 50,
+        "valid_judgments": 400,
+        "expected_judgments": 400,
+        "contract_coverage": 1.0,
+        "errors": {},
+        "error_count": 0,
+        "latency_ms_mean": 1578.462,
+        "latency_ms_max": 12645.19,
+        "metadata": {
+          "domain": "tickets",
+          "dataset": "tickets_100.csv",
+          "dataset_sha256": "e8cfdf24c13f89f9b120ccda9dcd1d28b9c4c0c45114ddfba41ae4add2d91a96",
+          "model": "jev-1.13.0",
+          "prompt_sha256": "53c0e99d47e10d91db2289342fb5592583a28cbf98ea56cdc33ca59f460c7f7d",
+          "threshold_sha256": "f6bfa4af1e587066efc828bd8b43648ed9019ba3265b449096f6baacff0945a7",
+          "split": "confirmation",
+          "evaluated_at": "2026-09-23T19:33:11.529923+00:00",
+          "mock": false,
+          "backend": "jev",
+          "n": 50,
+          "holdout_manifest_sha256": "901216e817785c61c983360421fcc54713a6080e71758b4003021d25ea560410",
+          "confirmation_split": "dev"
+        },
+        "area_accuracy": 0.84,
+        "intent_accuracy": 0.88,
+        "urgency_accuracy": 0.66,
+        "area": {
+          "accuracy": 0.84,
+          "macro_precision": 0.7752392344497607,
+          "macro_recall": 0.7975877192982457,
+          "macro_f1": 0.778061575507396,
+          "per_label": {
+            "tecnologia": {
+              "precision": 0.9473684210526315,
+              "recall": 0.9473684210526315,
+              "f1": 0.9473684210526315,
+              "support": 19
+            },
+            "logistica": {
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889,
+              "support": 5
+            },
+            "ventas": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 5
+            },
+            "atencion_cliente": {
+              "precision": 0.45454545454545453,
+              "recall": 0.8333333333333334,
+              "f1": 0.5882352941176471,
+              "support": 6
+            },
+            "pagos": {
+              "precision": 0.8,
+              "recall": 0.8,
+              "f1": 0.8000000000000002,
+              "support": 5
+            },
+            "seguridad": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            },
+            "rrhh": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 5
+            },
+            "otro": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 4
+            }
+          },
+          "confusion": {
+            "tecnologia": {
+              "tecnologia": 18,
+              "logistica": 0,
+              "ventas": 0,
+              "atencion_cliente": 1,
+              "pagos": 0,
+              "seguridad": 0,
+              "rrhh": 0,
+              "otro": 0
+            },
+            "logistica": {
+              "tecnologia": 0,
+              "logistica": 4,
+              "ventas": 0,
+              "atencion_cliente": 0,
+              "pagos": 1,
+              "seguridad": 0,
+              "rrhh": 0,
+              "otro": 0
+            },
+            "ventas": {
+              "tecnologia": 0,
+              "logistica": 0,
+              "ventas": 5,
+              "atencion_cliente": 0,
+              "pagos": 0,
+              "seguridad": 0,
+              "rrhh": 0,
+              "otro": 0
+            },
+            "atencion_cliente": {
+              "tecnologia": 1,
+              "logistica": 0,
+              "ventas": 0,
+              "atencion_cliente": 5,
+              "pagos": 0,
+              "seguridad": 0,
+              "rrhh": 0,
+              "otro": 0
+            },
+            "pagos": {
+              "tecnologia": 0,
+              "logistica": 0,
+              "ventas": 0,
+              "atencion_cliente": 1,
+              "pagos": 4,
+              "seguridad": 0,
+              "rrhh": 0,
+              "otro": 0
+            },
+            "seguridad": {
+              "tecnologia": 0,
+              "logistica": 0,
+              "ventas": 0,
+              "atencion_cliente": 0,
+              "pagos": 0,
+              "seguridad": 1,
+              "rrhh": 0,
+              "otro": 0
+            },
+            "rrhh": {
+              "tecnologia": 0,
+              "logistica": 0,
+              "ventas": 0,
+              "atencion_cliente": 0,
+              "pagos": 0,
+              "seguridad": 0,
+              "rrhh": 5,
+              "otro": 0
+            },
+            "otro": {
+              "tecnologia": 0,
+              "logistica": 0,
+              "ventas": 0,
+              "atencion_cliente": 4,
+              "pagos": 0,
+              "seguridad": 0,
+              "rrhh": 0,
+              "otro": 0
+            }
+          }
+        },
+        "intent": {
+          "accuracy": 0.88,
+          "macro_precision": 0.9178947368421053,
+          "macro_recall": 0.7954545454545455,
+          "macro_f1": 0.8101587301587301,
+          "per_label": {
+            "consulta": {
+              "precision": 0.8947368421052632,
+              "recall": 1.0,
+              "f1": 0.9444444444444444,
+              "support": 17
+            },
+            "incidencia": {
+              "precision": 0.8947368421052632,
+              "recall": 1.0,
+              "f1": 0.9444444444444444,
+              "support": 17
+            },
+            "reclamo": {
+              "precision": 1.0,
+              "recall": 0.25,
+              "f1": 0.4,
+              "support": 4
+            },
+            "solicitud": {
+              "precision": 0.8,
+              "recall": 0.7272727272727273,
+              "f1": 0.761904761904762,
+              "support": 11
+            },
+            "retroalimentacion": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            }
+          },
+          "confusion": {
+            "consulta": {
+              "consulta": 17,
+              "incidencia": 0,
+              "reclamo": 0,
+              "solicitud": 0,
+              "retroalimentacion": 0
+            },
+            "incidencia": {
+              "consulta": 0,
+              "incidencia": 17,
+              "reclamo": 0,
+              "solicitud": 0,
+              "retroalimentacion": 0
+            },
+            "reclamo": {
+              "consulta": 0,
+              "incidencia": 1,
+              "reclamo": 1,
+              "solicitud": 2,
+              "retroalimentacion": 0
+            },
+            "solicitud": {
+              "consulta": 2,
+              "incidencia": 1,
+              "reclamo": 0,
+              "solicitud": 8,
+              "retroalimentacion": 0
+            },
+            "retroalimentacion": {
+              "consulta": 0,
+              "incidencia": 0,
+              "reclamo": 0,
+              "solicitud": 0,
+              "retroalimentacion": 1
+            }
+          }
+        },
+        "urgency": {
+          "accuracy": 0.66,
+          "macro_precision": 0.5447454844006568,
+          "macro_recall": 0.4736111111111111,
+          "macro_f1": 0.4851056211958467,
+          "per_label": {
+            "low": {
+              "precision": 0.6551724137931034,
+              "recall": 0.95,
+              "f1": 0.7755102040816326,
+              "support": 20
+            },
+            "medium": {
+              "precision": 0.6666666666666666,
+              "recall": 0.4444444444444444,
+              "f1": 0.5333333333333333,
+              "support": 18
+            },
+            "high": {
+              "precision": 0.8571428571428571,
+              "recall": 0.5,
+              "f1": 0.631578947368421,
+              "support": 12
+            },
+            "critical": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "confusion": {
+            "low": {
+              "low": 19,
+              "medium": 1,
+              "high": 0,
+              "critical": 0
+            },
+            "medium": {
+              "low": 9,
+              "medium": 8,
+              "high": 1,
+              "critical": 0
+            },
+            "high": {
+              "low": 1,
+              "medium": 3,
+              "high": 6,
+              "critical": 2
+            },
+            "critical": {
+              "low": 0,
+              "medium": 0,
+              "high": 0,
+              "critical": 0
+            }
+          }
+        },
+        "requires_human": {
+          "accuracy": 0.64,
+          "n": 50,
+          "missing_predictions": 0
+        },
+        "requires_human_accuracy": 0.64,
+        "security_legal": {
+          "accuracy": 0.98,
+          "n": 50,
+          "missing_predictions": 0
+        },
+        "security_legal_accuracy": 0.98,
+        "refund": {
+          "accuracy": 0.98,
+          "n": 50,
+          "missing_predictions": 0
+        },
+        "refund_accuracy": 0.98,
+        "technical_repro": {
+          "accuracy": 0.8,
+          "n": 50,
+          "missing_predictions": 0
+        },
+        "technical_repro_accuracy": 0.8,
+        "actionability": {
+          "accuracy": 0.28,
+          "macro_precision": 0.2033096926713948,
+          "macro_recall": 0.32142857142857145,
+          "macro_f1": 0.16358187907632646,
+          "per_label": {
+            "clarification": {
+              "precision": 0.2765957446808511,
+              "recall": 0.9285714285714286,
+              "f1": 0.42622950819672134,
+              "support": 14
+            },
+            "standard_action": {
+              "precision": 0.3333333333333333,
+              "recall": 0.03571428571428571,
+              "f1": 0.06451612903225806,
+              "support": 28
+            },
+            "immediate_action": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 8
+            }
+          },
+          "confusion": {
+            "clarification": {
+              "clarification": 13,
+              "standard_action": 1,
+              "immediate_action": 0
+            },
+            "standard_action": {
+              "clarification": 27,
+              "standard_action": 1,
+              "immediate_action": 0
+            },
+            "immediate_action": {
+              "clarification": 7,
+              "standard_action": 1,
+              "immediate_action": 0
+            }
+          }
+        },
+        "actionability_accuracy": 0.28,
+        "actionability_adjacent_accuracy": 0.86,
+        "actionability_mae": 0.86,
+        "gold_accept_recall": 0.8076923076923077,
+        "gold_accept": {
+          "label": "accept",
+          "recall": 0.8076923076923077,
+          "hits": 21,
+          "support": 26
+        },
+        "route_macro_f1": 0.5495495495495495,
+        "route_confusion": {
+          "accept": {
+            "accept": 21,
+            "review": 5
+          },
+          "review": {
+            "accept": 16,
+            "review": 8
+          }
+        },
+        "warnings": [
+          "Las métricas son de un holdout pequeño; no son un benchmark de producción."
+        ]
+      }
+    }
+  ]
+}

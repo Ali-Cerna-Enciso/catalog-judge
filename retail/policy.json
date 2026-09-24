@@ -1,0 +1,30 @@
+{
+  "version": "favorita-demand-policy-v4",
+  "source": "CORPORATION_FAVORITA public demand mirror; no stock, cost, margin, or inventory fields",
+  "judge": "code",
+  "outputs": [
+    "series_decision",
+    "handling_risk",
+    "exception_needed",
+    "route"
+  ],
+  "window_start": "2017-06-21",
+  "window_end": "2017-08-15",
+  "thresholds": {
+    "demand_drop_ratio": 0.75,
+    "replenishment_candidate_ratio": 1.1,
+    "candidate_active_day_share": 0.35,
+    "handling_risk_sales_cv": 1.0,
+    "handling_risk_active_day_share": 0.25,
+    "handling_risk_promo_share": 0.5,
+    "exception_sales_cv": 1.5,
+    "exception_active_day_share": 0.15,
+    "exclude_active_day_share": 0.1
+  },
+  "route_map": {
+    "include": "accept",
+    "review": "review",
+    "exclude": "block"
+  },
+  "honesty_note": "Demand policy is arithmetic over public series. Jev is not asked to restate these thresholds. demand_drop_alert and replenishment_candidate are demand proxies; neither is a stockout or inventory count."
+}

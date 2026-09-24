@@ -1,0 +1,44 @@
+{
+  "version": "confirmation-manifest-v5",
+  "protocol": "v5",
+  "frozen_at": "2026-09-23T20:51:07.127180+00:00",
+  "model": "jev-1.13.0",
+  "jev_domains": [
+    "tickets"
+  ],
+  "code_domains": [
+    "retail"
+  ],
+  "prompt_sha256": {
+    "tickets": "d7e2c39a9200177c63ca2040b92818054f7b22b6a6544b709253b8f057a0ff75",
+    "retail": "bbe320e6d72aade349239e48cc8bb9edcc9400f866de305eb069c3feef820161"
+  },
+  "threshold_sha256": "edce172dedca34160c3b812166bcfd203ba32c6fde04480e94a06ece23fe0dc3",
+  "datasets": {
+    "tickets": {
+      "path": "tickets/data/tickets_v5_50.csv",
+      "sha256": "062ca586f4e83052f68528c81ddf8338916a0da547849e48b62262562cc66e32",
+      "dev": 0,
+      "holdout": 0,
+      "confirmation": 50,
+      "confirmation_split": "confirmation",
+      "limit": 50
+    },
+    "retail": {
+      "path": "retail/data/favorita_demand_96.csv",
+      "sha256": "169f6e5458d91d3c2080509315b9dd8c3adc76ca7829f0b560c3562965a7bd3c",
+      "dev": 76,
+      "holdout": 20,
+      "confirmation": 0,
+      "confirmation_split": "holdout",
+      "limit": 20
+    }
+  },
+  "confirmation_split": {
+    "tickets": "confirmation",
+    "retail": "holdout"
+  },
+  "no_tuning_on_confirmation": true,
+  "no_tuning_on_holdout": true,
+  "note": "Tickets confirmation = 50 textos nuevos rubricados v2. No se re-mide el dev/holdout de v4. Retail es política de código."
+}

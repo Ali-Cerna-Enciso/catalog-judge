@@ -1,0 +1,7170 @@
+{
+  "metadata": {
+    "domain": "tickets",
+    "dataset": "tickets_v6_50.csv",
+    "dataset_sha256": "52812a89ba40c36fa6455f24c88734763a7b9282afbf480dda4ba9fa0954bb18",
+    "model": "jev-1.13.0",
+    "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+    "threshold_sha256": "d634432e182f25b6f51f333cef7a362d549a13fec65841f2a1963f74d7f7736f",
+    "split": "confirmation",
+    "evaluated_at": "2026-09-23T23:14:21.957463+00:00",
+    "mock": false,
+    "backend": "jev",
+    "n": 50,
+    "state_schema_sha256": "5b243f2bdc5fabdd5fd52515ac4e9a9bf0dc3ea45def7692fa03f7ce8bc94484",
+    "holdout_manifest_sha256": "fde9c0dd438dcfc46d5338d7ae6caf4fea22f941e6769abdcfc4ad0f0032498f",
+    "confirmation_split": "confirmation"
+  },
+  "summary": {
+    "domain": "tickets",
+    "n": 50,
+    "requests_completed": 50,
+    "valid_responses": 50,
+    "valid_judgments": 500,
+    "expected_judgments": 500,
+    "contract_coverage": 1.0,
+    "errors": {},
+    "error_count": 0,
+    "latency_ms_mean": 670.374,
+    "latency_ms_max": 1633.014,
+    "metadata": {
+      "domain": "tickets",
+      "dataset": "tickets_v6_50.csv",
+      "dataset_sha256": "52812a89ba40c36fa6455f24c88734763a7b9282afbf480dda4ba9fa0954bb18",
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "threshold_sha256": "d634432e182f25b6f51f333cef7a362d549a13fec65841f2a1963f74d7f7736f",
+      "split": "confirmation",
+      "evaluated_at": "2026-09-23T23:14:21.957463+00:00",
+      "mock": false,
+      "backend": "jev",
+      "n": 50,
+      "state_schema_sha256": "5b243f2bdc5fabdd5fd52515ac4e9a9bf0dc3ea45def7692fa03f7ce8bc94484",
+      "holdout_manifest_sha256": "fde9c0dd438dcfc46d5338d7ae6caf4fea22f941e6769abdcfc4ad0f0032498f",
+      "confirmation_split": "confirmation"
+    },
+    "area_accuracy": 0.86,
+    "intent_accuracy": 0.8,
+    "urgency_accuracy": 0.72,
+    "area": {
+      "accuracy": 0.86,
+      "macro_precision": 0.8375,
+      "macro_recall": 0.8366477272727273,
+      "macro_f1": 0.8225694444444445,
+      "per_label": {
+        "tecnologia": {
+          "precision": 1.0,
+          "recall": 0.8181818181818182,
+          "f1": 0.9,
+          "support": 11
+        },
+        "logistica": {
+          "precision": 0.9,
+          "recall": 0.9,
+          "f1": 0.9,
+          "support": 10
+        },
+        "ventas": {
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999,
+          "support": 5
+        },
+        "atencion_cliente": {
+          "precision": 0.875,
+          "recall": 1.0,
+          "f1": 0.9333333333333333,
+          "support": 7
+        },
+        "pagos": {
+          "precision": 0.875,
+          "recall": 0.875,
+          "f1": 0.875,
+          "support": 8
+        },
+        "seguridad": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.888888888888889,
+          "support": 4
+        },
+        "rrhh": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        "otro": {
+          "precision": 0.25,
+          "recall": 0.5,
+          "f1": 0.3333333333333333,
+          "support": 2
+        }
+      },
+      "confusion": {
+        "tecnologia": {
+          "tecnologia": 9,
+          "logistica": 0,
+          "ventas": 0,
+          "atencion_cliente": 0,
+          "pagos": 1,
+          "seguridad": 1,
+          "rrhh": 0,
+          "otro": 0
+        },
+        "logistica": {
+          "tecnologia": 0,
+          "logistica": 9,
+          "ventas": 0,
+          "atencion_cliente": 0,
+          "pagos": 0,
+          "seguridad": 0,
+          "rrhh": 0,
+          "otro": 1
+        },
+        "ventas": {
+          "tecnologia": 0,
+          "logistica": 1,
+          "ventas": 3,
+          "atencion_cliente": 0,
+          "pagos": 0,
+          "seguridad": 0,
+          "rrhh": 0,
+          "otro": 1
+        },
+        "atencion_cliente": {
+          "tecnologia": 0,
+          "logistica": 0,
+          "ventas": 0,
+          "atencion_cliente": 7,
+          "pagos": 0,
+          "seguridad": 0,
+          "rrhh": 0,
+          "otro": 0
+        },
+        "pagos": {
+          "tecnologia": 0,
+          "logistica": 0,
+          "ventas": 0,
+          "atencion_cliente": 0,
+          "pagos": 7,
+          "seguridad": 0,
+          "rrhh": 0,
+          "otro": 1
+        },
+        "seguridad": {
+          "tecnologia": 0,
+          "logistica": 0,
+          "ventas": 0,
+          "atencion_cliente": 0,
+          "pagos": 0,
+          "seguridad": 4,
+          "rrhh": 0,
+          "otro": 0
+        },
+        "rrhh": {
+          "tecnologia": 0,
+          "logistica": 0,
+          "ventas": 0,
+          "atencion_cliente": 0,
+          "pagos": 0,
+          "seguridad": 0,
+          "rrhh": 3,
+          "otro": 0
+        },
+        "otro": {
+          "tecnologia": 0,
+          "logistica": 0,
+          "ventas": 0,
+          "atencion_cliente": 1,
+          "pagos": 0,
+          "seguridad": 0,
+          "rrhh": 0,
+          "otro": 1
+        }
+      }
+    },
+    "intent": {
+      "accuracy": 0.8,
+      "macro_precision": 0.8689296814296815,
+      "macro_recall": 0.8480963480963482,
+      "macro_f1": 0.8490884115884118,
+      "per_label": {
+        "consulta": {
+          "precision": 0.9090909090909091,
+          "recall": 0.9090909090909091,
+          "f1": 0.9090909090909091,
+          "support": 11
+        },
+        "incidencia": {
+          "precision": 0.8333333333333334,
+          "recall": 0.5,
+          "f1": 0.625,
+          "support": 10
+        },
+        "reclamo": {
+          "precision": 0.625,
+          "recall": 0.8333333333333334,
+          "f1": 0.7142857142857143,
+          "support": 12
+        },
+        "solicitud": {
+          "precision": 0.8461538461538461,
+          "recall": 0.8461538461538461,
+          "f1": 0.8461538461538461,
+          "support": 13
+        },
+        "retroalimentacion": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        "otro": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        }
+      },
+      "confusion": {
+        "consulta": {
+          "consulta": 10,
+          "incidencia": 0,
+          "reclamo": 0,
+          "solicitud": 1,
+          "retroalimentacion": 0,
+          "otro": 0
+        },
+        "incidencia": {
+          "consulta": 0,
+          "incidencia": 5,
+          "reclamo": 5,
+          "solicitud": 0,
+          "retroalimentacion": 0,
+          "otro": 0
+        },
+        "reclamo": {
+          "consulta": 0,
+          "incidencia": 1,
+          "reclamo": 10,
+          "solicitud": 1,
+          "retroalimentacion": 0,
+          "otro": 0
+        },
+        "solicitud": {
+          "consulta": 1,
+          "incidencia": 0,
+          "reclamo": 1,
+          "solicitud": 11,
+          "retroalimentacion": 0,
+          "otro": 0
+        },
+        "retroalimentacion": {
+          "consulta": 0,
+          "incidencia": 0,
+          "reclamo": 0,
+          "solicitud": 0,
+          "retroalimentacion": 3,
+          "otro": 0
+        },
+        "otro": {
+          "consulta": 0,
+          "incidencia": 0,
+          "reclamo": 0,
+          "solicitud": 0,
+          "retroalimentacion": 0,
+          "otro": 1
+        }
+      }
+    },
+    "urgency": {
+      "accuracy": 0.72,
+      "macro_precision": 0.7524703557312253,
+      "macro_recall": 0.7610367892976588,
+      "macro_f1": 0.756128364389234,
+      "per_label": {
+        "low": {
+          "precision": 0.782608695652174,
+          "recall": 0.782608695652174,
+          "f1": 0.782608695652174,
+          "support": 23
+        },
+        "medium": {
+          "precision": 0.5,
+          "recall": 0.46153846153846156,
+          "f1": 0.48000000000000004,
+          "support": 13
+        },
+        "high": {
+          "precision": 0.7272727272727273,
+          "recall": 0.8,
+          "f1": 0.761904761904762,
+          "support": 10
+        },
+        "critical": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        }
+      },
+      "confusion": {
+        "low": {
+          "low": 18,
+          "medium": 4,
+          "high": 1,
+          "critical": 0
+        },
+        "medium": {
+          "low": 5,
+          "medium": 6,
+          "high": 2,
+          "critical": 0
+        },
+        "high": {
+          "low": 0,
+          "medium": 2,
+          "high": 8,
+          "critical": 0
+        },
+        "critical": {
+          "low": 0,
+          "medium": 0,
+          "high": 0,
+          "critical": 4
+        }
+      }
+    },
+    "requires_human": {
+      "accuracy": 0.72,
+      "n": 50,
+      "missing_predictions": 0
+    },
+    "requires_human_accuracy": 0.72,
+    "security_legal": {
+      "accuracy": 0.98,
+      "n": 50,
+      "missing_predictions": 0
+    },
+    "security_legal_accuracy": 0.98,
+    "refund": {
+      "accuracy": 1.0,
+      "n": 50,
+      "missing_predictions": 0
+    },
+    "refund_accuracy": 1.0,
+    "technical_repro": {
+      "accuracy": 0.98,
+      "n": 50,
+      "missing_predictions": 0
+    },
+    "technical_repro_accuracy": 0.98,
+    "actionability": {
+      "accuracy": 0.52,
+      "macro_precision": 0.6666666666666666,
+      "macro_recall": 0.7857142857142858,
+      "macro_f1": 0.6237634705719811,
+      "per_label": {
+        "no_action": {
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571428571428571,
+          "support": 3
+        },
+        "clarification": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "support": 7
+        },
+        "standard_action": {
+          "precision": 1.0,
+          "recall": 0.34285714285714286,
+          "f1": 0.5106382978723404,
+          "support": 35
+        },
+        "immediate_action": {
+          "precision": 0.6666666666666666,
+          "recall": 0.8,
+          "f1": 0.7272727272727272,
+          "support": 5
+        }
+      },
+      "confusion": {
+        "no_action": {
+          "no_action": 3,
+          "clarification": 0,
+          "standard_action": 0,
+          "immediate_action": 0
+        },
+        "clarification": {
+          "no_action": 0,
+          "clarification": 7,
+          "standard_action": 0,
+          "immediate_action": 0
+        },
+        "standard_action": {
+          "no_action": 1,
+          "clarification": 20,
+          "standard_action": 12,
+          "immediate_action": 2
+        },
+        "immediate_action": {
+          "no_action": 0,
+          "clarification": 1,
+          "standard_action": 0,
+          "immediate_action": 4
+        }
+      }
+    },
+    "actionability_accuracy": 0.52,
+    "actionability_adjacent_accuracy": 0.96,
+    "actionability_mae": 0.52,
+    "gold_accept_recall": 0.34782608695652173,
+    "gold_accept": {
+      "label": "accept",
+      "recall": 0.34782608695652173,
+      "hits": 8,
+      "support": 23
+    },
+    "route_macro_f1": 0.6323529411764706,
+    "route_confusion": {
+      "accept": {
+        "accept": 8,
+        "review": 15
+      },
+      "review": {
+        "accept": 1,
+        "review": 26
+      }
+    },
+    "warnings": [
+      "Las métricas son de un holdout pequeño; no son un benchmark de producción."
+    ]
+  },
+  "warnings": [
+    "Las métricas son de un holdout pequeño; no son un benchmark de producción."
+  ],
+  "requests": [
+    {
+      "row_id": "v6-row-001",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "tecnologia",
+        "expected_intent": "incidencia",
+        "expected_urgency": "medium",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": true,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "tecnologia",
+          "confidence": 1.0,
+          "choice": "tecnologia",
+          "probabilities": {
+            "rrhh": 0.0,
+            "atencion_cliente": 0.0,
+            "tecnologia": 1.0,
+            "ventas": 0.0,
+            "otro": 0.0,
+            "seguridad": 0.0,
+            "pagos": 0.0,
+            "logistica": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "incidencia",
+          "confidence": 0.96,
+          "choice": "incidencia",
+          "probabilities": {
+            "reclamo": 0.03,
+            "incidencia": 0.97,
+            "otro": 0.0,
+            "consulta": 0.0,
+            "retroalimentacion": 0.0,
+            "solicitud": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 2.08,
+          "confidence": 0.81,
+          "score": 2.08,
+          "probabilities": {
+            "0": 0.0,
+            "1": 0.05,
+            "2": 0.82,
+            "3": 0.13
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.4,
+          "noul": 0.4
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.08,
+          "noul": 0.08
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "immediate_action",
+          "confidence": 0.47,
+          "choice": "immediate_action",
+          "probabilities": {
+            "no_action": 0.0,
+            "immediate_action": 0.61,
+            "clarification": 0.29,
+            "standard_action": 0.1
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.98,
+          "noul": 0.98
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "urgency.nivel=2"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "tecnologia",
+        "priority": "high",
+        "area_runner_up": {
+          "choice": "rrhh",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 1621.895,
+      "request_id": "req_01a0d08dba52761395f40de8af0b6510",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-002",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "tecnologia",
+        "expected_intent": "incidencia",
+        "expected_urgency": "high",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": true,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "tecnologia",
+          "confidence": 1.0,
+          "choice": "tecnologia",
+          "probabilities": {
+            "atencion_cliente": 0.0,
+            "tecnologia": 1.0,
+            "otro": 0.0,
+            "rrhh": 0.0,
+            "pagos": 0.0,
+            "seguridad": 0.0,
+            "ventas": 0.0,
+            "logistica": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "incidencia",
+          "confidence": 0.93,
+          "choice": "incidencia",
+          "probabilities": {
+            "reclamo": 0.06,
+            "otro": 0.0,
+            "consulta": 0.0,
+            "retroalimentacion": 0.0,
+            "incidencia": 0.94,
+            "solicitud": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 2.06,
+          "confidence": 0.93,
+          "score": 2.06,
+          "probabilities": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.93,
+            "3": 0.07
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.48,
+          "noul": 0.48
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.09,
+          "noul": 0.09
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "immediate_action",
+          "confidence": 0.27,
+          "choice": "immediate_action",
+          "probabilities": {
+            "no_action": 0.0,
+            "immediate_action": 0.46,
+            "standard_action": 0.12,
+            "clarification": 0.42
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.94,
+          "noul": 0.94
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "urgency.nivel=2"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "tecnologia",
+        "priority": "high",
+        "area_runner_up": {
+          "choice": "atencion_cliente",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 1625.21,
+      "request_id": "req_01a0d08dba52768c9f7bf7ff0a41a43f",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-003",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "tecnologia",
+        "expected_intent": "incidencia",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "tecnologia",
+          "confidence": 1.0,
+          "choice": "tecnologia",
+          "probabilities": {
+            "otro": 0.0,
+            "pagos": 0.0,
+            "ventas": 0.0,
+            "atencion_cliente": 0.0,
+            "rrhh": 0.0,
+            "tecnologia": 1.0,
+            "seguridad": 0.0,
+            "logistica": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "incidencia",
+          "confidence": 0.86,
+          "choice": "incidencia",
+          "probabilities": {
+            "reclamo": 0.11,
+            "otro": 0.0,
+            "consulta": 0.0,
+            "retroalimentacion": 0.0,
+            "incidencia": 0.89,
+            "solicitud": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.01,
+          "confidence": 0.99,
+          "score": 0.01,
+          "probabilities": {
+            "0": 0.99,
+            "1": 0.01,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.8,
+          "noul": 0.8
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.88,
+          "choice": "clarification",
+          "probabilities": {
+            "clarification": 0.91,
+            "no_action": 0.01,
+            "standard_action": 0.08,
+            "immediate_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.31,
+          "noul": 0.31
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "is_ambiguous.noul=0.8",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "tecnologia",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "otro",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": true,
+        "technical_repro_low": true
+      },
+      "latency_ms": 1633.014,
+      "request_id": "req_01a0d08dba5e70138572b3899524fa2e",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-004",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "tecnologia",
+        "expected_intent": "consulta",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "tecnologia",
+          "confidence": 1.0,
+          "choice": "tecnologia",
+          "probabilities": {
+            "pagos": 0.0,
+            "atencion_cliente": 0.0,
+            "seguridad": 0.0,
+            "otro": 0.0,
+            "tecnologia": 1.0,
+            "logistica": 0.0,
+            "ventas": 0.0,
+            "rrhh": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "consulta",
+          "confidence": 0.9,
+          "choice": "consulta",
+          "probabilities": {
+            "otro": 0.0,
+            "solicitud": 0.08,
+            "incidencia": 0.0,
+            "consulta": 0.92,
+            "retroalimentacion": 0.0,
+            "reclamo": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.41,
+          "confidence": 0.59,
+          "score": 0.41,
+          "probabilities": {
+            "0": 0.61,
+            "1": 0.38,
+            "2": 0.01,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.73,
+          "noul": 0.73
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.09,
+          "noul": 0.09
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.06,
+          "noul": 0.06
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.41,
+          "choice": "clarification",
+          "probabilities": {
+            "standard_action": 0.44,
+            "immediate_action": 0.0,
+            "clarification": 0.56,
+            "no_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.06,
+          "noul": 0.06
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "is_ambiguous.noul=0.73",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "tecnologia",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "pagos",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": true,
+        "technical_repro_low": true
+      },
+      "latency_ms": 1619.317,
+      "request_id": "req_01a0d08dba517706a79335900608f900",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-005",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "tecnologia",
+        "expected_intent": "solicitud",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "seguridad",
+          "confidence": 0.68,
+          "choice": "seguridad",
+          "probabilities": {
+            "rrhh": 0.0,
+            "atencion_cliente": 0.0,
+            "seguridad": 0.73,
+            "otro": 0.0,
+            "logistica": 0.08,
+            "ventas": 0.0,
+            "tecnologia": 0.19,
+            "pagos": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "solicitud",
+          "confidence": 1.0,
+          "choice": "solicitud",
+          "probabilities": {
+            "consulta": 0.0,
+            "solicitud": 1.0,
+            "retroalimentacion": 0.0,
+            "otro": 0.0,
+            "incidencia": 0.0,
+            "reclamo": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.29,
+          "confidence": 0.71,
+          "score": 0.29,
+          "probabilities": {
+            "0": 0.76,
+            "1": 0.2,
+            "2": 0.02,
+            "3": 0.02
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.76,
+          "noul": 0.76
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.17,
+          "noul": 0.17
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.08,
+          "noul": 0.08
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.8,
+          "choice": "clarification",
+          "probabilities": {
+            "no_action": 0.0,
+            "immediate_action": 0.0,
+            "clarification": 0.86,
+            "standard_action": 0.14
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "area.confidence_destino_sensible.seguridad=0.68",
+        "is_ambiguous.noul=0.76",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "seguridad",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "tecnologia",
+          "probability": 0.19
+        },
+        "area_margin": 0.54,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 589.22,
+      "request_id": "req_01a0d08dbc9b78f4afcd9b915259c9bb",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-006",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "tecnologia",
+        "expected_intent": "reclamo",
+        "expected_urgency": "high",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "pagos",
+          "confidence": 0.53,
+          "choice": "pagos",
+          "probabilities": {
+            "pagos": 0.59,
+            "logistica": 0.0,
+            "otro": 0.01,
+            "atencion_cliente": 0.0,
+            "seguridad": 0.0,
+            "rrhh": 0.0,
+            "ventas": 0.0,
+            "tecnologia": 0.4
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "reclamo",
+          "confidence": 0.63,
+          "choice": "reclamo",
+          "probabilities": {
+            "solicitud": 0.0,
+            "incidencia": 0.3,
+            "consulta": 0.0,
+            "otro": 0.0,
+            "retroalimentacion": 0.0,
+            "reclamo": 0.7
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 2.0,
+          "confidence": 0.99,
+          "score": 2.0,
+          "probabilities": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 1.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.79,
+          "noul": 0.79
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.12,
+          "noul": 0.12
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.06,
+          "noul": 0.06
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.91,
+          "choice": "clarification",
+          "probabilities": {
+            "immediate_action": 0.03,
+            "clarification": 0.94,
+            "no_action": 0.0,
+            "standard_action": 0.03
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.42,
+          "noul": 0.42
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "area.confidence_destino_sensible.pagos=0.53",
+        "intent.confidence_media=0.63",
+        "is_ambiguous.noul=0.79",
+        "needs_clarification",
+        "urgency.nivel=2"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "pagos",
+        "priority": "high",
+        "area_runner_up": {
+          "choice": "tecnologia",
+          "probability": 0.4
+        },
+        "area_margin": 0.19,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 548.728,
+      "request_id": "req_01a0d08dbc9c7e6ca714b5b5ae68a319",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-007",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "tecnologia",
+        "expected_intent": "incidencia",
+        "expected_urgency": "critical",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "immediate_action",
+        "expected_technical_repro": true,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "tecnologia",
+          "confidence": 1.0,
+          "choice": "tecnologia",
+          "probabilities": {
+            "pagos": 0.0,
+            "atencion_cliente": 0.0,
+            "seguridad": 0.0,
+            "otro": 0.0,
+            "tecnologia": 1.0,
+            "logistica": 0.0,
+            "ventas": 0.0,
+            "rrhh": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "incidencia",
+          "confidence": 0.93,
+          "choice": "incidencia",
+          "probabilities": {
+            "otro": 0.0,
+            "solicitud": 0.0,
+            "reclamo": 0.06,
+            "retroalimentacion": 0.0,
+            "consulta": 0.0,
+            "incidencia": 0.94
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 2.99,
+          "confidence": 0.99,
+          "score": 2.99,
+          "probabilities": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.01,
+            "3": 0.99
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.29,
+          "noul": 0.29
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.08,
+          "noul": 0.08
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "immediate_action",
+          "confidence": 0.99,
+          "choice": "immediate_action",
+          "probabilities": {
+            "standard_action": 0.0,
+            "no_action": 0.0,
+            "clarification": 0.01,
+            "immediate_action": 0.99
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.92,
+          "noul": 0.92
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "urgency.nivel=3"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "tecnologia",
+        "priority": "critical",
+        "area_runner_up": {
+          "choice": "pagos",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 535.567,
+      "request_id": "req_01a0d08dbc9a76e886dd11135d248b91",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-008",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "tecnologia",
+        "expected_intent": "incidencia",
+        "expected_urgency": "critical",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "immediate_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "tecnologia",
+          "confidence": 0.93,
+          "choice": "tecnologia",
+          "probabilities": {
+            "rrhh": 0.0,
+            "ventas": 0.0,
+            "tecnologia": 0.94,
+            "atencion_cliente": 0.0,
+            "otro": 0.0,
+            "seguridad": 0.06,
+            "pagos": 0.0,
+            "logistica": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "incidencia",
+          "confidence": 0.97,
+          "choice": "incidencia",
+          "probabilities": {
+            "solicitud": 0.0,
+            "incidencia": 0.98,
+            "otro": 0.0,
+            "consulta": 0.0,
+            "retroalimentacion": 0.0,
+            "reclamo": 0.02
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 2.98,
+          "confidence": 0.98,
+          "score": 2.98,
+          "probabilities": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.02,
+            "3": 0.98
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.55,
+          "noul": 0.55
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.11,
+          "noul": 0.11
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.1,
+          "noul": 0.1
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "immediate_action",
+          "confidence": 0.96,
+          "choice": "immediate_action",
+          "probabilities": {
+            "no_action": 0.0,
+            "immediate_action": 0.97,
+            "standard_action": 0.0,
+            "clarification": 0.03
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.19,
+          "noul": 0.19
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "is_ambiguous.incertidumbre=0.55",
+        "urgency.nivel=3",
+        "technical_repro.noul=0.19"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "tecnologia",
+        "priority": "critical",
+        "area_runner_up": {
+          "choice": "seguridad",
+          "probability": 0.06
+        },
+        "area_margin": 0.88,
+        "needs_clarification": false,
+        "technical_repro_low": true
+      },
+      "latency_ms": 571.658,
+      "request_id": "req_01a0d08dbc9f7ac5915c1ce26e9e474a",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-009",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "tecnologia",
+        "expected_intent": "consulta",
+        "expected_urgency": "low",
+        "expected_human": true,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "clarification",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "tecnologia",
+          "confidence": 0.83,
+          "choice": "tecnologia",
+          "probabilities": {
+            "rrhh": 0.0,
+            "pagos": 0.0,
+            "seguridad": 0.0,
+            "tecnologia": 0.86,
+            "logistica": 0.0,
+            "atencion_cliente": 0.08,
+            "otro": 0.06,
+            "ventas": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "consulta",
+          "confidence": 0.97,
+          "choice": "consulta",
+          "probabilities": {
+            "reclamo": 0.0,
+            "consulta": 0.98,
+            "incidencia": 0.02,
+            "otro": 0.0,
+            "solicitud": 0.0,
+            "retroalimentacion": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.02,
+          "confidence": 0.98,
+          "score": 0.02,
+          "probabilities": {
+            "0": 0.98,
+            "1": 0.02,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.95,
+          "noul": 0.95
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.06,
+          "noul": 0.06
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.99,
+          "choice": "clarification",
+          "probabilities": {
+            "standard_action": 0.0,
+            "immediate_action": 0.0,
+            "no_action": 0.01,
+            "clarification": 0.99
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "is_ambiguous.noul=0.95",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "tecnologia",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "atencion_cliente",
+          "probability": 0.08
+        },
+        "area_margin": 0.78,
+        "needs_clarification": true,
+        "technical_repro_low": true
+      },
+      "latency_ms": 597.43,
+      "request_id": "req_01a0d08dbeb677e181603ae58ee5a27c",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-010",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "tecnologia",
+        "expected_intent": "reclamo",
+        "expected_urgency": "medium",
+        "expected_human": true,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "tecnologia",
+          "confidence": 0.31,
+          "choice": "tecnologia",
+          "probabilities": {
+            "seguridad": 0.01,
+            "otro": 0.26,
+            "logistica": 0.0,
+            "ventas": 0.02,
+            "rrhh": 0.0,
+            "pagos": 0.19,
+            "atencion_cliente": 0.12,
+            "tecnologia": 0.4
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "incidencia",
+          "confidence": 0.43,
+          "choice": "incidencia",
+          "probabilities": {
+            "consulta": 0.28,
+            "retroalimentacion": 0.0,
+            "otro": 0.0,
+            "solicitud": 0.0,
+            "reclamo": 0.19,
+            "incidencia": 0.53
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.69,
+          "confidence": 0.51,
+          "score": 0.69,
+          "probabilities": {
+            "0": 0.4,
+            "1": 0.51,
+            "2": 0.09,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.91,
+          "noul": 0.91
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.28,
+          "noul": 0.28
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.24,
+          "noul": 0.24
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.98,
+          "choice": "clarification",
+          "probabilities": {
+            "clarification": 0.98,
+            "no_action": 0.0,
+            "immediate_action": 0.0,
+            "standard_action": 0.02
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.15,
+          "noul": 0.15
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "area.confidence_bajo=0.31",
+        "intent.confidence_bajo=0.43",
+        "is_ambiguous.noul=0.91",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "tecnologia",
+        "priority": "normal",
+        "area_runner_up": {
+          "choice": "otro",
+          "probability": 0.26
+        },
+        "area_margin": 0.14,
+        "needs_clarification": true,
+        "technical_repro_low": true
+      },
+      "latency_ms": 561.185,
+      "request_id": "req_01a0d08dbebd7ded989140b1490d9b34",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-011",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "tecnologia",
+        "expected_intent": "solicitud",
+        "expected_urgency": "medium",
+        "expected_human": true,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "tecnologia",
+          "confidence": 1.0,
+          "choice": "tecnologia",
+          "probabilities": {
+            "otro": 0.0,
+            "atencion_cliente": 0.0,
+            "tecnologia": 1.0,
+            "seguridad": 0.0,
+            "logistica": 0.0,
+            "rrhh": 0.0,
+            "pagos": 0.0,
+            "ventas": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "solicitud",
+          "confidence": 1.0,
+          "choice": "solicitud",
+          "probabilities": {
+            "reclamo": 0.0,
+            "retroalimentacion": 0.0,
+            "incidencia": 0.0,
+            "otro": 0.0,
+            "consulta": 0.0,
+            "solicitud": 1.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.08,
+          "confidence": 0.92,
+          "score": 0.08,
+          "probabilities": {
+            "0": 0.92,
+            "1": 0.08,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.32,
+          "noul": 0.32
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.76,
+          "noul": 0.76
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.41,
+          "choice": "clarification",
+          "probabilities": {
+            "clarification": 0.56,
+            "immediate_action": 0.0,
+            "no_action": 0.0,
+            "standard_action": 0.44
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "needs_specialist.noul=0.76",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "tecnologia",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "otro",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": true,
+        "technical_repro_low": true
+      },
+      "latency_ms": 544.101,
+      "request_id": "req_01a0d08dbee67d0da9afa39267db341a",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-012",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "logistica",
+        "expected_intent": "reclamo",
+        "expected_urgency": "high",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": true,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "logistica",
+          "confidence": 0.86,
+          "choice": "logistica",
+          "probabilities": {
+            "rrhh": 0.0,
+            "pagos": 0.0,
+            "seguridad": 0.0,
+            "logistica": 0.88,
+            "tecnologia": 0.11,
+            "atencion_cliente": 0.01,
+            "otro": 0.0,
+            "ventas": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "reclamo",
+          "confidence": 0.98,
+          "choice": "reclamo",
+          "probabilities": {
+            "reclamo": 0.99,
+            "consulta": 0.0,
+            "otro": 0.0,
+            "incidencia": 0.01,
+            "solicitud": 0.0,
+            "retroalimentacion": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 2.0,
+          "confidence": 1.0,
+          "score": 2.0,
+          "probabilities": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 1.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.06,
+          "noul": 0.06
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.08,
+          "noul": 0.08
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.98,
+          "noul": 0.98
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "standard_action",
+          "confidence": 0.98,
+          "choice": "standard_action",
+          "probabilities": {
+            "standard_action": 0.99,
+            "immediate_action": 0.0,
+            "no_action": 0.0,
+            "clarification": 0.01
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.23,
+          "noul": 0.23
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "refund_or_replacement.noul=0.98",
+        "urgency.nivel=2"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "pagos",
+        "priority": "high",
+        "area_runner_up": {
+          "choice": "tecnologia",
+          "probability": 0.11
+        },
+        "area_margin": 0.77,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 577.409,
+      "request_id": "req_01a0d08dbeec70e4bc98f43315c01295",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-013",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "logistica",
+        "expected_intent": "incidencia",
+        "expected_urgency": "medium",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "logistica",
+          "confidence": 1.0,
+          "choice": "logistica",
+          "probabilities": {
+            "rrhh": 0.0,
+            "logistica": 1.0,
+            "otro": 0.0,
+            "ventas": 0.0,
+            "tecnologia": 0.0,
+            "pagos": 0.0,
+            "atencion_cliente": 0.0,
+            "seguridad": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "reclamo",
+          "confidence": 0.49,
+          "choice": "reclamo",
+          "probabilities": {
+            "reclamo": 0.58,
+            "consulta": 0.02,
+            "solicitud": 0.0,
+            "retroalimentacion": 0.0,
+            "incidencia": 0.4,
+            "otro": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 1.53,
+          "confidence": 0.53,
+          "score": 1.53,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.45,
+            "2": 0.54,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "standard_action",
+          "confidence": 1.0,
+          "choice": "standard_action",
+          "probabilities": {
+            "clarification": 0.0,
+            "immediate_action": 0.0,
+            "no_action": 0.0,
+            "standard_action": 1.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.09,
+          "noul": 0.09
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "intent.confidence_bajo=0.49",
+        "urgency.nivel=2"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "logistica",
+        "priority": "high",
+        "area_runner_up": {
+          "choice": "rrhh",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 545.755,
+      "request_id": "req_01a0d08dc0ea76f29428392928815f1e",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-014",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "logistica",
+        "expected_intent": "consulta",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "logistica",
+          "confidence": 0.99,
+          "choice": "logistica",
+          "probabilities": {
+            "seguridad": 0.0,
+            "atencion_cliente": 0.0,
+            "otro": 0.0,
+            "pagos": 0.0,
+            "ventas": 0.0,
+            "tecnologia": 0.0,
+            "logistica": 1.0,
+            "rrhh": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "consulta",
+          "confidence": 0.86,
+          "choice": "consulta",
+          "probabilities": {
+            "incidencia": 0.0,
+            "reclamo": 0.0,
+            "solicitud": 0.12,
+            "retroalimentacion": 0.0,
+            "consulta": 0.88,
+            "otro": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.38,
+          "confidence": 0.62,
+          "score": 0.38,
+          "probabilities": {
+            "0": 0.63,
+            "1": 0.36,
+            "2": 0.01,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.34,
+          "noul": 0.34
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.06,
+          "noul": 0.06
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.74,
+          "choice": "clarification",
+          "probabilities": {
+            "clarification": 0.81,
+            "standard_action": 0.19,
+            "immediate_action": 0.0,
+            "no_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        }
+      ],
+      "route": "accept",
+      "reasons": [
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "logistica",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "seguridad",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 589.38,
+      "request_id": "req_01a0d08dc10d755c995aec5a95082b18",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-015",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "logistica",
+        "expected_intent": "solicitud",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "logistica",
+          "confidence": 1.0,
+          "choice": "logistica",
+          "probabilities": {
+            "seguridad": 0.0,
+            "logistica": 1.0,
+            "ventas": 0.0,
+            "tecnologia": 0.0,
+            "rrhh": 0.0,
+            "atencion_cliente": 0.0,
+            "otro": 0.0,
+            "pagos": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "solicitud",
+          "confidence": 1.0,
+          "choice": "solicitud",
+          "probabilities": {
+            "retroalimentacion": 0.0,
+            "incidencia": 0.0,
+            "reclamo": 0.0,
+            "consulta": 0.0,
+            "solicitud": 1.0,
+            "otro": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 1.75,
+          "confidence": 0.74,
+          "score": 1.75,
+          "probabilities": {
+            "0": 0.0,
+            "1": 0.25,
+            "2": 0.75,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.12,
+          "noul": 0.12
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.06,
+          "noul": 0.06
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "standard_action",
+          "confidence": 0.98,
+          "choice": "standard_action",
+          "probabilities": {
+            "clarification": 0.01,
+            "no_action": 0.0,
+            "immediate_action": 0.0,
+            "standard_action": 0.99
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "urgency.nivel=2"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "logistica",
+        "priority": "high",
+        "area_runner_up": {
+          "choice": "seguridad",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 601.059,
+      "request_id": "req_01a0d08dc116740b932836062b048410",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-016",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "logistica",
+        "expected_intent": "reclamo",
+        "expected_urgency": "high",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "immediate_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "logistica",
+          "confidence": 1.0,
+          "choice": "logistica",
+          "probabilities": {
+            "seguridad": 0.0,
+            "atencion_cliente": 0.0,
+            "otro": 0.0,
+            "pagos": 0.0,
+            "ventas": 0.0,
+            "tecnologia": 0.0,
+            "logistica": 1.0,
+            "rrhh": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "reclamo",
+          "confidence": 0.69,
+          "choice": "reclamo",
+          "probabilities": {
+            "solicitud": 0.11,
+            "reclamo": 0.74,
+            "otro": 0.0,
+            "retroalimentacion": 0.0,
+            "consulta": 0.0,
+            "incidencia": 0.15
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 2.0,
+          "confidence": 1.0,
+          "score": 2.0,
+          "probabilities": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 1.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.85,
+          "noul": 0.85
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.17,
+          "noul": 0.17
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.09,
+          "noul": 0.09
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.9,
+          "choice": "clarification",
+          "probabilities": {
+            "clarification": 0.92,
+            "standard_action": 0.06,
+            "immediate_action": 0.02,
+            "no_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "intent.confidence_media=0.69",
+        "is_ambiguous.noul=0.85",
+        "needs_clarification",
+        "urgency.nivel=2"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "logistica",
+        "priority": "high",
+        "area_runner_up": {
+          "choice": "seguridad",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 624.321,
+      "request_id": "req_01a0d08dc13b751ca066e7a48e0ea188",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-017",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "logistica",
+        "expected_intent": "incidencia",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "clarification",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "logistica",
+          "confidence": 1.0,
+          "choice": "logistica",
+          "probabilities": {
+            "ventas": 0.0,
+            "rrhh": 0.0,
+            "seguridad": 0.0,
+            "tecnologia": 0.0,
+            "atencion_cliente": 0.0,
+            "otro": 0.0,
+            "logistica": 1.0,
+            "pagos": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "reclamo",
+          "confidence": 0.75,
+          "choice": "reclamo",
+          "probabilities": {
+            "solicitud": 0.0,
+            "incidencia": 0.2,
+            "otro": 0.0,
+            "reclamo": 0.8,
+            "consulta": 0.0,
+            "retroalimentacion": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 1.28,
+          "confidence": 0.57,
+          "score": 1.28,
+          "probabilities": {
+            "0": 0.07,
+            "1": 0.57,
+            "2": 0.36,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.89,
+          "noul": 0.89
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.07,
+          "noul": 0.07
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.99,
+          "choice": "clarification",
+          "probabilities": {
+            "standard_action": 0.0,
+            "clarification": 1.0,
+            "no_action": 0.0,
+            "immediate_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "is_ambiguous.noul=0.89",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "logistica",
+        "priority": "normal",
+        "area_runner_up": {
+          "choice": "ventas",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 612.488,
+      "request_id": "req_01a0d08dc31a71519b87b74c0644efb1",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-018",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "logistica",
+        "expected_intent": "incidencia",
+        "expected_urgency": "medium",
+        "expected_human": true,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "clarification",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "logistica",
+          "confidence": 1.0,
+          "choice": "logistica",
+          "probabilities": {
+            "seguridad": 0.0,
+            "logistica": 1.0,
+            "rrhh": 0.0,
+            "tecnologia": 0.0,
+            "atencion_cliente": 0.0,
+            "pagos": 0.0,
+            "otro": 0.0,
+            "ventas": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "reclamo",
+          "confidence": 0.66,
+          "choice": "reclamo",
+          "probabilities": {
+            "incidencia": 0.17,
+            "otro": 0.0,
+            "reclamo": 0.72,
+            "solicitud": 0.0,
+            "consulta": 0.11,
+            "retroalimentacion": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 1.28,
+          "confidence": 0.54,
+          "score": 1.28,
+          "probabilities": {
+            "0": 0.09,
+            "1": 0.54,
+            "2": 0.37,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.87,
+          "noul": 0.87
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.08,
+          "noul": 0.08
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.99,
+          "choice": "clarification",
+          "probabilities": {
+            "standard_action": 0.01,
+            "clarification": 0.99,
+            "immediate_action": 0.0,
+            "no_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "intent.confidence_media=0.66",
+        "is_ambiguous.noul=0.87",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "logistica",
+        "priority": "normal",
+        "area_runner_up": {
+          "choice": "seguridad",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 555.689,
+      "request_id": "req_01a0d08dc35572ef8fefc5aa1e8e76a0",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-019",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "logistica",
+        "expected_intent": "solicitud",
+        "expected_urgency": "medium",
+        "expected_human": true,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "logistica",
+          "confidence": 1.0,
+          "choice": "logistica",
+          "probabilities": {
+            "pagos": 0.0,
+            "atencion_cliente": 0.0,
+            "seguridad": 0.0,
+            "otro": 0.0,
+            "tecnologia": 0.0,
+            "logistica": 1.0,
+            "ventas": 0.0,
+            "rrhh": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "solicitud",
+          "confidence": 1.0,
+          "choice": "solicitud",
+          "probabilities": {
+            "otro": 0.0,
+            "solicitud": 1.0,
+            "incidencia": 0.0,
+            "retroalimentacion": 0.0,
+            "consulta": 0.0,
+            "reclamo": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.34,
+          "confidence": 0.66,
+          "score": 0.34,
+          "probabilities": {
+            "0": 0.7,
+            "1": 0.26,
+            "2": 0.04,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.84,
+          "noul": 0.84
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.82,
+          "noul": 0.82
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.98,
+          "choice": "clarification",
+          "probabilities": {
+            "standard_action": 0.01,
+            "no_action": 0.0,
+            "clarification": 0.99,
+            "immediate_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "is_ambiguous.noul=0.84",
+        "needs_specialist.noul=0.82",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "logistica",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "pagos",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 539.158,
+      "request_id": "req_01a0d08dc36276e8ade3be1d0d27159a",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-020",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "logistica",
+        "expected_intent": "reclamo",
+        "expected_urgency": "high",
+        "expected_human": true,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "logistica",
+          "confidence": 1.0,
+          "choice": "logistica",
+          "probabilities": {
+            "ventas": 0.0,
+            "rrhh": 0.0,
+            "seguridad": 0.0,
+            "pagos": 0.0,
+            "otro": 0.0,
+            "logistica": 1.0,
+            "tecnologia": 0.0,
+            "atencion_cliente": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "reclamo",
+          "confidence": 0.58,
+          "choice": "reclamo",
+          "probabilities": {
+            "consulta": 0.02,
+            "otro": 0.0,
+            "incidencia": 0.33,
+            "solicitud": 0.0,
+            "retroalimentacion": 0.0,
+            "reclamo": 0.65
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 2.0,
+          "confidence": 1.0,
+          "score": 2.0,
+          "probabilities": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 1.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.1,
+          "noul": 0.1
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.12,
+          "noul": 0.12
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.08,
+          "noul": 0.08
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "standard_action",
+          "confidence": 0.97,
+          "choice": "standard_action",
+          "probabilities": {
+            "standard_action": 0.98,
+            "clarification": 0.0,
+            "immediate_action": 0.02,
+            "no_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.16,
+          "noul": 0.16
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "intent.confidence_bajo=0.58",
+        "urgency.nivel=2"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "logistica",
+        "priority": "high",
+        "area_runner_up": {
+          "choice": "ventas",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 574.117,
+      "request_id": "req_01a0d08dc3b67bb49537a19b8253b125",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-021",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "logistica",
+        "expected_intent": "retroalimentacion",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "no_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "otro",
+          "confidence": 0.72,
+          "choice": "otro",
+          "probabilities": {
+            "seguridad": 0.0,
+            "ventas": 0.0,
+            "logistica": 0.15,
+            "atencion_cliente": 0.09,
+            "tecnologia": 0.0,
+            "otro": 0.76,
+            "rrhh": 0.0,
+            "pagos": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "retroalimentacion",
+          "confidence": 1.0,
+          "choice": "retroalimentacion",
+          "probabilities": {
+            "retroalimentacion": 1.0,
+            "incidencia": 0.0,
+            "reclamo": 0.0,
+            "consulta": 0.0,
+            "otro": 0.0,
+            "solicitud": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.0,
+          "confidence": 1.0,
+          "score": 0.0,
+          "probabilities": {
+            "0": 1.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.45,
+          "noul": 0.45
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.01,
+          "noul": 0.01
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "no_action",
+          "confidence": 1.0,
+          "choice": "no_action",
+          "probabilities": {
+            "no_action": 1.0,
+            "clarification": 0.0,
+            "immediate_action": 0.0,
+            "standard_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "area.confidence_media=0.72",
+        "area_o_intent_otro",
+        "actionability=no_action"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "otro",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "logistica",
+          "probability": 0.15
+        },
+        "area_margin": 0.61,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 530.233,
+      "request_id": "req_01a0d08dc5737cf28eb41581fc720588",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-022",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "pagos",
+        "expected_intent": "reclamo",
+        "expected_urgency": "high",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": true,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "pagos",
+          "confidence": 1.0,
+          "choice": "pagos",
+          "probabilities": {
+            "seguridad": 0.0,
+            "pagos": 1.0,
+            "atencion_cliente": 0.0,
+            "otro": 0.0,
+            "tecnologia": 0.0,
+            "rrhh": 0.0,
+            "logistica": 0.0,
+            "ventas": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "reclamo",
+          "confidence": 1.0,
+          "choice": "reclamo",
+          "probabilities": {
+            "solicitud": 0.0,
+            "consulta": 0.0,
+            "otro": 0.0,
+            "reclamo": 1.0,
+            "incidencia": 0.0,
+            "retroalimentacion": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 1.83,
+          "confidence": 0.83,
+          "score": 1.83,
+          "probabilities": {
+            "0": 0.0,
+            "1": 0.17,
+            "2": 0.83,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.75,
+          "noul": 0.75
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.1,
+          "noul": 0.1
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.06,
+          "noul": 0.06
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.98,
+          "noul": 0.98
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.95,
+          "choice": "clarification",
+          "probabilities": {
+            "clarification": 0.96,
+            "immediate_action": 0.0,
+            "no_action": 0.0,
+            "standard_action": 0.04
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.11,
+          "noul": 0.11
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "is_ambiguous.noul=0.75",
+        "refund_or_replacement.noul=0.98",
+        "needs_clarification",
+        "urgency.nivel=2"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "pagos",
+        "priority": "high",
+        "area_runner_up": {
+          "choice": "seguridad",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 622.939,
+      "request_id": "req_01a0d08dc58c70178307d77d34c04d60",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-023",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "pagos",
+        "expected_intent": "consulta",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "pagos",
+          "confidence": 1.0,
+          "choice": "pagos",
+          "probabilities": {
+            "logistica": 0.0,
+            "rrhh": 0.0,
+            "otro": 0.0,
+            "pagos": 1.0,
+            "tecnologia": 0.0,
+            "atencion_cliente": 0.0,
+            "seguridad": 0.0,
+            "ventas": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "consulta",
+          "confidence": 1.0,
+          "choice": "consulta",
+          "probabilities": {
+            "incidencia": 0.0,
+            "reclamo": 0.0,
+            "retroalimentacion": 0.0,
+            "solicitud": 0.0,
+            "otro": 0.0,
+            "consulta": 1.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.95,
+          "confidence": 0.9,
+          "score": 0.95,
+          "probabilities": {
+            "0": 0.07,
+            "1": 0.91,
+            "2": 0.02,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.78,
+          "noul": 0.78
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.07,
+          "noul": 0.07
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.96,
+          "choice": "clarification",
+          "probabilities": {
+            "immediate_action": 0.0,
+            "clarification": 0.97,
+            "no_action": 0.0,
+            "standard_action": 0.03
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "is_ambiguous.noul=0.78",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "pagos",
+        "priority": "normal",
+        "area_runner_up": {
+          "choice": "logistica",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 526.814,
+      "request_id": "req_01a0d08dc5777f478d5175a1442b8538",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-024",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "pagos",
+        "expected_intent": "solicitud",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "pagos",
+          "confidence": 0.94,
+          "choice": "pagos",
+          "probabilities": {
+            "rrhh": 0.0,
+            "logistica": 0.0,
+            "otro": 0.0,
+            "ventas": 0.0,
+            "tecnologia": 0.0,
+            "pagos": 0.95,
+            "atencion_cliente": 0.01,
+            "seguridad": 0.04
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "solicitud",
+          "confidence": 1.0,
+          "choice": "solicitud",
+          "probabilities": {
+            "reclamo": 0.0,
+            "consulta": 0.0,
+            "solicitud": 1.0,
+            "retroalimentacion": 0.0,
+            "otro": 0.0,
+            "incidencia": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.97,
+          "confidence": 0.96,
+          "score": 0.97,
+          "probabilities": {
+            "0": 0.04,
+            "1": 0.96,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.82,
+          "noul": 0.82
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.28,
+          "noul": 0.28
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.12,
+          "noul": 0.12
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.94,
+          "choice": "clarification",
+          "probabilities": {
+            "clarification": 0.96,
+            "immediate_action": 0.0,
+            "no_action": 0.0,
+            "standard_action": 0.04
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "is_ambiguous.noul=0.82",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "pagos",
+        "priority": "normal",
+        "area_runner_up": {
+          "choice": "seguridad",
+          "probability": 0.04
+        },
+        "area_margin": 0.91,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 515.423,
+      "request_id": "req_01a0d08dc5d47bdda013d63d0110d288",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-025",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "pagos",
+        "expected_intent": "solicitud",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": true,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "pagos",
+          "confidence": 1.0,
+          "choice": "pagos",
+          "probabilities": {
+            "pagos": 1.0,
+            "atencion_cliente": 0.0,
+            "seguridad": 0.0,
+            "otro": 0.0,
+            "tecnologia": 0.0,
+            "logistica": 0.0,
+            "ventas": 0.0,
+            "rrhh": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "reclamo",
+          "confidence": 0.81,
+          "choice": "reclamo",
+          "probabilities": {
+            "otro": 0.0,
+            "solicitud": 0.09,
+            "reclamo": 0.84,
+            "retroalimentacion": 0.0,
+            "consulta": 0.07,
+            "incidencia": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.48,
+          "confidence": 0.52,
+          "score": 0.48,
+          "probabilities": {
+            "0": 0.52,
+            "1": 0.48,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.36,
+          "noul": 0.36
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.07,
+          "noul": 0.07
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.86,
+          "noul": 0.86
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.94,
+          "choice": "clarification",
+          "probabilities": {
+            "standard_action": 0.05,
+            "immediate_action": 0.0,
+            "clarification": 0.95,
+            "no_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        }
+      ],
+      "route": "accept",
+      "reasons": [
+        "refund_or_replacement.noul=0.86",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "pagos",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "atencion_cliente",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 572.84,
+      "request_id": "req_01a0d08dc7867aaabc5aa650f168c961",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-026",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "pagos",
+        "expected_intent": "reclamo",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "pagos",
+          "confidence": 0.97,
+          "choice": "pagos",
+          "probabilities": {
+            "rrhh": 0.0,
+            "tecnologia": 0.0,
+            "pagos": 0.98,
+            "otro": 0.0,
+            "ventas": 0.02,
+            "atencion_cliente": 0.0,
+            "seguridad": 0.0,
+            "logistica": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "reclamo",
+          "confidence": 0.87,
+          "choice": "reclamo",
+          "probabilities": {
+            "reclamo": 0.89,
+            "retroalimentacion": 0.0,
+            "incidencia": 0.02,
+            "solicitud": 0.0,
+            "otro": 0.0,
+            "consulta": 0.09
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.94,
+          "confidence": 0.94,
+          "score": 0.94,
+          "probabilities": {
+            "0": 0.06,
+            "1": 0.94,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.82,
+          "noul": 0.82
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.08,
+          "noul": 0.08
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.97,
+          "choice": "clarification",
+          "probabilities": {
+            "clarification": 0.98,
+            "standard_action": 0.02,
+            "no_action": 0.0,
+            "immediate_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "is_ambiguous.noul=0.82",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "pagos",
+        "priority": "normal",
+        "area_runner_up": {
+          "choice": "ventas",
+          "probability": 0.02
+        },
+        "area_margin": 0.96,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 799.431,
+      "request_id": "req_01a0d08dc78b734094abac95b79c24a0",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-027",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "pagos",
+        "expected_intent": "consulta",
+        "expected_urgency": "low",
+        "expected_human": true,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "clarification",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "pagos",
+          "confidence": 1.0,
+          "choice": "pagos",
+          "probabilities": {
+            "otro": 0.0,
+            "seguridad": 0.0,
+            "tecnologia": 0.0,
+            "atencion_cliente": 0.0,
+            "pagos": 1.0,
+            "rrhh": 0.0,
+            "logistica": 0.0,
+            "ventas": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "consulta",
+          "confidence": 0.97,
+          "choice": "consulta",
+          "probabilities": {
+            "reclamo": 0.02,
+            "retroalimentacion": 0.0,
+            "incidencia": 0.0,
+            "consulta": 0.98,
+            "otro": 0.0,
+            "solicitud": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.43,
+          "confidence": 0.57,
+          "score": 0.43,
+          "probabilities": {
+            "0": 0.57,
+            "1": 0.43,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.93,
+          "noul": 0.93
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.07,
+          "noul": 0.07
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 1.0,
+          "choice": "clarification",
+          "probabilities": {
+            "standard_action": 0.0,
+            "clarification": 1.0,
+            "no_action": 0.0,
+            "immediate_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "is_ambiguous.noul=0.93",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "pagos",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "otro",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 557.172,
+      "request_id": "req_01a0d08dc7d27990a52de5b550ee122a",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-028",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "pagos",
+        "expected_intent": "reclamo",
+        "expected_urgency": "high",
+        "expected_human": true,
+        "expected_security_legal": false,
+        "expected_refund": true,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "pagos",
+          "confidence": 0.98,
+          "choice": "pagos",
+          "probabilities": {
+            "seguridad": 0.01,
+            "pagos": 0.99,
+            "atencion_cliente": 0.0,
+            "otro": 0.0,
+            "tecnologia": 0.0,
+            "rrhh": 0.0,
+            "logistica": 0.0,
+            "ventas": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "solicitud",
+          "confidence": 0.64,
+          "choice": "solicitud",
+          "probabilities": {
+            "solicitud": 0.7,
+            "consulta": 0.0,
+            "otro": 0.0,
+            "reclamo": 0.29,
+            "incidencia": 0.01,
+            "retroalimentacion": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 1.44,
+          "confidence": 0.27,
+          "score": 1.44,
+          "probabilities": {
+            "0": 0.15,
+            "1": 0.5,
+            "2": 0.11,
+            "3": 0.24
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.84,
+          "noul": 0.84
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.44,
+          "noul": 0.44
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.75,
+          "noul": 0.75
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.49,
+          "noul": 0.49
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.89,
+          "noul": 0.89
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.94,
+          "choice": "clarification",
+          "probabilities": {
+            "clarification": 0.96,
+            "immediate_action": 0.01,
+            "no_action": 0.0,
+            "standard_action": 0.03
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "intent.confidence_media=0.64",
+        "is_ambiguous.noul=0.84",
+        "is_contradictory.incertidumbre=0.44",
+        "needs_specialist.noul=0.75",
+        "refund_or_replacement.noul=0.89",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "pagos",
+        "priority": "normal",
+        "area_runner_up": {
+          "choice": "seguridad",
+          "probability": 0.01
+        },
+        "area_margin": 0.98,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 560.997,
+      "request_id": "req_01a0d08dc7fe78bdb12142db618b2f3c",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-029",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "pagos",
+        "expected_intent": "retroalimentacion",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "no_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "otro",
+          "confidence": 0.78,
+          "choice": "otro",
+          "probabilities": {
+            "logistica": 0.0,
+            "ventas": 0.0,
+            "rrhh": 0.0,
+            "atencion_cliente": 0.19,
+            "pagos": 0.0,
+            "seguridad": 0.0,
+            "otro": 0.81,
+            "tecnologia": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "retroalimentacion",
+          "confidence": 1.0,
+          "choice": "retroalimentacion",
+          "probabilities": {
+            "solicitud": 0.0,
+            "incidencia": 0.0,
+            "retroalimentacion": 1.0,
+            "otro": 0.0,
+            "reclamo": 0.0,
+            "consulta": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.0,
+          "confidence": 1.0,
+          "score": 0.0,
+          "probabilities": {
+            "0": 1.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.67,
+          "noul": 0.67
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "no_action",
+          "confidence": 1.0,
+          "choice": "no_action",
+          "probabilities": {
+            "clarification": 0.0,
+            "standard_action": 0.0,
+            "immediate_action": 0.0,
+            "no_action": 1.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "area_o_intent_otro",
+        "is_ambiguous.incertidumbre=0.67",
+        "actionability=no_action"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "otro",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "atencion_cliente",
+          "probability": 0.19
+        },
+        "area_margin": 0.62,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 627.701,
+      "request_id": "req_01a0d08dc9cd75a4ad77f8ba5257f122",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-030",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "ventas",
+        "expected_intent": "consulta",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "ventas",
+          "confidence": 1.0,
+          "choice": "ventas",
+          "probabilities": {
+            "logistica": 0.0,
+            "ventas": 1.0,
+            "rrhh": 0.0,
+            "atencion_cliente": 0.0,
+            "pagos": 0.0,
+            "otro": 0.0,
+            "tecnologia": 0.0,
+            "seguridad": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "solicitud",
+          "confidence": 0.43,
+          "choice": "solicitud",
+          "probabilities": {
+            "solicitud": 0.53,
+            "incidencia": 0.0,
+            "retroalimentacion": 0.0,
+            "otro": 0.0,
+            "reclamo": 0.0,
+            "consulta": 0.47
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.01,
+          "confidence": 0.99,
+          "score": 0.01,
+          "probabilities": {
+            "0": 0.99,
+            "1": 0.01,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.22,
+          "noul": 0.22
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "standard_action",
+          "confidence": 0.92,
+          "choice": "standard_action",
+          "probabilities": {
+            "no_action": 0.0,
+            "standard_action": 0.94,
+            "immediate_action": 0.0,
+            "clarification": 0.06
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "intent.confidence_bajo=0.43"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "ventas",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "logistica",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 661.576,
+      "request_id": "req_01a0d08dca217499bc0c8a1d0af3b453",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-031",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "ventas",
+        "expected_intent": "solicitud",
+        "expected_urgency": "medium",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "ventas",
+          "confidence": 1.0,
+          "choice": "ventas",
+          "probabilities": {
+            "rrhh": 0.0,
+            "pagos": 0.0,
+            "logistica": 0.0,
+            "otro": 0.0,
+            "atencion_cliente": 0.0,
+            "seguridad": 0.0,
+            "tecnologia": 0.0,
+            "ventas": 1.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "solicitud",
+          "confidence": 1.0,
+          "choice": "solicitud",
+          "probabilities": {
+            "otro": 0.0,
+            "retroalimentacion": 0.0,
+            "reclamo": 0.0,
+            "solicitud": 1.0,
+            "incidencia": 0.0,
+            "consulta": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 1.08,
+          "confidence": 0.89,
+          "score": 1.08,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.89,
+            "2": 0.09,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.23,
+          "noul": 0.23
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "standard_action",
+          "confidence": 0.9,
+          "choice": "standard_action",
+          "probabilities": {
+            "standard_action": 0.93,
+            "immediate_action": 0.0,
+            "no_action": 0.0,
+            "clarification": 0.07
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        }
+      ],
+      "route": "accept",
+      "reasons": [
+        "ruteo_por_umbral"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "ventas",
+        "priority": "normal",
+        "area_runner_up": {
+          "choice": "rrhh",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 575.445,
+      "request_id": "req_01a0d08dca277511bd63e85c0ef78c12",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-032",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "ventas",
+        "expected_intent": "reclamo",
+        "expected_urgency": "medium",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": true,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "logistica",
+          "confidence": 0.98,
+          "choice": "logistica",
+          "probabilities": {
+            "pagos": 0.0,
+            "otro": 0.0,
+            "logistica": 0.99,
+            "atencion_cliente": 0.01,
+            "seguridad": 0.0,
+            "rrhh": 0.0,
+            "ventas": 0.0,
+            "tecnologia": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "reclamo",
+          "confidence": 0.98,
+          "choice": "reclamo",
+          "probabilities": {
+            "solicitud": 0.0,
+            "incidencia": 0.01,
+            "retroalimentacion": 0.0,
+            "consulta": 0.0,
+            "otro": 0.0,
+            "reclamo": 0.99
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.81,
+          "confidence": 0.71,
+          "score": 0.81,
+          "probabilities": {
+            "0": 0.24,
+            "1": 0.71,
+            "2": 0.05,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.06,
+          "noul": 0.06
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.97,
+          "noul": 0.97
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "standard_action",
+          "confidence": 1.0,
+          "choice": "standard_action",
+          "probabilities": {
+            "immediate_action": 0.0,
+            "clarification": 0.0,
+            "no_action": 0.0,
+            "standard_action": 1.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.06,
+          "noul": 0.06
+        }
+      ],
+      "route": "accept",
+      "reasons": [
+        "refund_or_replacement.noul=0.97"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "pagos",
+        "priority": "normal",
+        "area_runner_up": {
+          "choice": "atencion_cliente",
+          "probability": 0.01
+        },
+        "area_margin": 0.98,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 591.948,
+      "request_id": "req_01a0d08dcaae7df1a1230c65e93ea81d",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-033",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "ventas",
+        "expected_intent": "incidencia",
+        "expected_urgency": "medium",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "clarification",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "ventas",
+          "confidence": 0.93,
+          "choice": "ventas",
+          "probabilities": {
+            "logistica": 0.0,
+            "otro": 0.01,
+            "pagos": 0.04,
+            "seguridad": 0.0,
+            "ventas": 0.95,
+            "tecnologia": 0.0,
+            "atencion_cliente": 0.0,
+            "rrhh": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "reclamo",
+          "confidence": 0.65,
+          "choice": "reclamo",
+          "probabilities": {
+            "retroalimentacion": 0.0,
+            "incidencia": 0.29,
+            "solicitud": 0.0,
+            "otro": 0.0,
+            "reclamo": 0.71,
+            "consulta": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.59,
+          "confidence": 0.57,
+          "score": 0.59,
+          "probabilities": {
+            "0": 0.42,
+            "1": 0.57,
+            "2": 0.01,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.94,
+          "noul": 0.94
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.09,
+          "noul": 0.09
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 1.0,
+          "choice": "clarification",
+          "probabilities": {
+            "standard_action": 0.0,
+            "clarification": 1.0,
+            "no_action": 0.0,
+            "immediate_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.18,
+          "noul": 0.18
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "intent.confidence_media=0.65",
+        "is_ambiguous.noul=0.94",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "ventas",
+        "priority": "normal",
+        "area_runner_up": {
+          "choice": "pagos",
+          "probability": 0.04
+        },
+        "area_margin": 0.91,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 593.158,
+      "request_id": "req_01a0d08dcc547bf0a1ac5c37d908023e",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-034",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "ventas",
+        "expected_intent": "retroalimentacion",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "otro",
+          "confidence": 0.55,
+          "choice": "otro",
+          "probabilities": {
+            "rrhh": 0.0,
+            "pagos": 0.0,
+            "seguridad": 0.0,
+            "logistica": 0.0,
+            "tecnologia": 0.0,
+            "atencion_cliente": 0.29,
+            "otro": 0.61,
+            "ventas": 0.1
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "retroalimentacion",
+          "confidence": 1.0,
+          "choice": "retroalimentacion",
+          "probabilities": {
+            "reclamo": 0.0,
+            "consulta": 0.0,
+            "incidencia": 0.0,
+            "otro": 0.0,
+            "solicitud": 0.0,
+            "retroalimentacion": 1.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.0,
+          "confidence": 1.0,
+          "score": 0.0,
+          "probabilities": {
+            "0": 1.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.61,
+          "noul": 0.61
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.06,
+          "noul": 0.06
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "no_action",
+          "confidence": 0.4,
+          "choice": "no_action",
+          "probabilities": {
+            "standard_action": 0.02,
+            "clarification": 0.43,
+            "no_action": 0.55,
+            "immediate_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "area.confidence_bajo=0.55",
+        "area_o_intent_otro",
+        "is_ambiguous.incertidumbre=0.61",
+        "actionability=no_action"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "otro",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "atencion_cliente",
+          "probability": 0.29
+        },
+        "area_margin": 0.32,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 553.805,
+      "request_id": "req_01a0d08dcc5a7fa2b7afe3810d950108",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-035",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "seguridad",
+        "expected_intent": "incidencia",
+        "expected_urgency": "critical",
+        "expected_human": false,
+        "expected_security_legal": true,
+        "expected_refund": false,
+        "expected_actionability": "immediate_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "seguridad",
+          "confidence": 1.0,
+          "choice": "seguridad",
+          "probabilities": {
+            "atencion_cliente": 0.0,
+            "rrhh": 0.0,
+            "tecnologia": 0.0,
+            "logistica": 0.0,
+            "otro": 0.0,
+            "seguridad": 1.0,
+            "pagos": 0.0,
+            "ventas": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "reclamo",
+          "confidence": 0.87,
+          "choice": "reclamo",
+          "probabilities": {
+            "solicitud": 0.02,
+            "incidencia": 0.08,
+            "otro": 0.0,
+            "consulta": 0.0,
+            "retroalimentacion": 0.0,
+            "reclamo": 0.9
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 3.0,
+          "confidence": 1.0,
+          "score": 3.0,
+          "probabilities": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": 1.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.45,
+          "noul": 0.45
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.15,
+          "noul": 0.15
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.98,
+          "noul": 0.98
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "immediate_action",
+          "confidence": 0.88,
+          "choice": "immediate_action",
+          "probabilities": {
+            "no_action": 0.0,
+            "immediate_action": 0.91,
+            "clarification": 0.09,
+            "standard_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.11,
+          "noul": 0.11
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "security_legal_risk.noul=0.98",
+        "urgency.nivel=3"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "seguridad",
+        "priority": "critical",
+        "area_runner_up": {
+          "choice": "atencion_cliente",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 600.746,
+      "request_id": "req_01a0d08dcc9e70cabd40f7d141a9fb7d",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-036",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "seguridad",
+        "expected_intent": "reclamo",
+        "expected_urgency": "critical",
+        "expected_human": false,
+        "expected_security_legal": true,
+        "expected_refund": false,
+        "expected_actionability": "immediate_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "seguridad",
+          "confidence": 0.67,
+          "choice": "seguridad",
+          "probabilities": {
+            "rrhh": 0.0,
+            "logistica": 0.0,
+            "otro": 0.0,
+            "ventas": 0.0,
+            "tecnologia": 0.0,
+            "pagos": 0.29,
+            "atencion_cliente": 0.0,
+            "seguridad": 0.71
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "reclamo",
+          "confidence": 0.98,
+          "choice": "reclamo",
+          "probabilities": {
+            "reclamo": 0.99,
+            "consulta": 0.0,
+            "otro": 0.0,
+            "retroalimentacion": 0.0,
+            "incidencia": 0.01,
+            "solicitud": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 3.0,
+          "confidence": 1.0,
+          "score": 3.0,
+          "probabilities": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": 1.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.6,
+          "noul": 0.6
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.14,
+          "noul": 0.14
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.98,
+          "noul": 0.98
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "immediate_action",
+          "confidence": 0.93,
+          "choice": "immediate_action",
+          "probabilities": {
+            "clarification": 0.05,
+            "standard_action": 0.0,
+            "no_action": 0.0,
+            "immediate_action": 0.95
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "area.confidence_destino_sensible.seguridad=0.67",
+        "is_ambiguous.incertidumbre=0.6",
+        "security_legal_risk.noul=0.98",
+        "urgency.nivel=3"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "seguridad",
+        "priority": "critical",
+        "area_runner_up": {
+          "choice": "pagos",
+          "probability": 0.29
+        },
+        "area_margin": 0.42,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 544.127,
+      "request_id": "req_01a0d08dccfe7b64a95b6c15b2694b6d",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-037",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "seguridad",
+        "expected_intent": "solicitud",
+        "expected_urgency": "medium",
+        "expected_human": false,
+        "expected_security_legal": true,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "seguridad",
+          "confidence": 1.0,
+          "choice": "seguridad",
+          "probabilities": {
+            "pagos": 0.0,
+            "seguridad": 1.0,
+            "atencion_cliente": 0.0,
+            "otro": 0.0,
+            "rrhh": 0.0,
+            "logistica": 0.0,
+            "ventas": 0.0,
+            "tecnologia": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "solicitud",
+          "confidence": 1.0,
+          "choice": "solicitud",
+          "probabilities": {
+            "reclamo": 0.0,
+            "incidencia": 0.0,
+            "solicitud": 1.0,
+            "otro": 0.0,
+            "retroalimentacion": 0.0,
+            "consulta": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.49,
+          "confidence": 0.51,
+          "score": 0.49,
+          "probabilities": {
+            "0": 0.74,
+            "1": 0.13,
+            "2": 0.02,
+            "3": 0.11
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.52,
+          "noul": 0.52
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.08,
+          "noul": 0.08
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.1,
+          "noul": 0.1
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.84,
+          "choice": "clarification",
+          "probabilities": {
+            "standard_action": 0.12,
+            "immediate_action": 0.0,
+            "no_action": 0.0,
+            "clarification": 0.88
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        }
+      ],
+      "route": "accept",
+      "reasons": [
+        "is_ambiguous.incertidumbre=0.52",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "seguridad",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "pagos",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 817.999,
+      "request_id": "req_01a0d08dce7f75ebb73ac13b4d1dcb3b",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-038",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "seguridad",
+        "expected_intent": "solicitud",
+        "expected_urgency": "high",
+        "expected_human": true,
+        "expected_security_legal": true,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "seguridad",
+          "confidence": 1.0,
+          "choice": "seguridad",
+          "probabilities": {
+            "rrhh": 0.0,
+            "pagos": 0.0,
+            "seguridad": 1.0,
+            "logistica": 0.0,
+            "tecnologia": 0.0,
+            "atencion_cliente": 0.0,
+            "otro": 0.0,
+            "ventas": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "solicitud",
+          "confidence": 0.99,
+          "choice": "solicitud",
+          "probabilities": {
+            "reclamo": 0.01,
+            "consulta": 0.0,
+            "otro": 0.0,
+            "incidencia": 0.0,
+            "solicitud": 0.99,
+            "retroalimentacion": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.62,
+          "confidence": 0.59,
+          "score": 0.62,
+          "probabilities": {
+            "0": 0.39,
+            "1": 0.6,
+            "2": 0.01,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.87,
+          "noul": 0.87
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.61,
+          "noul": 0.61
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.85,
+          "noul": 0.85
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.98,
+          "choice": "clarification",
+          "probabilities": {
+            "standard_action": 0.01,
+            "immediate_action": 0.0,
+            "no_action": 0.0,
+            "clarification": 0.99
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "is_ambiguous.noul=0.87",
+        "needs_specialist.noul=0.61",
+        "security_legal_risk.noul=0.85",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "seguridad",
+        "priority": "normal",
+        "area_runner_up": {
+          "choice": "rrhh",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 615.504,
+      "request_id": "req_01a0d08dcea271a5a87e8fea4ba5aec7",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-039",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "atencion_cliente",
+        "expected_intent": "consulta",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "atencion_cliente",
+          "confidence": 1.0,
+          "choice": "atencion_cliente",
+          "probabilities": {
+            "pagos": 0.0,
+            "otro": 0.0,
+            "seguridad": 0.0,
+            "rrhh": 0.0,
+            "ventas": 0.0,
+            "logistica": 0.0,
+            "tecnologia": 0.0,
+            "atencion_cliente": 1.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "consulta",
+          "confidence": 0.46,
+          "choice": "consulta",
+          "probabilities": {
+            "retroalimentacion": 0.0,
+            "solicitud": 0.01,
+            "otro": 0.0,
+            "consulta": 0.55,
+            "reclamo": 0.43,
+            "incidencia": 0.01
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.19,
+          "confidence": 0.81,
+          "score": 0.19,
+          "probabilities": {
+            "0": 0.81,
+            "1": 0.19,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.11,
+          "noul": 0.11
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "standard_action",
+          "confidence": 0.95,
+          "choice": "standard_action",
+          "probabilities": {
+            "clarification": 0.03,
+            "no_action": 0.0,
+            "immediate_action": 0.0,
+            "standard_action": 0.97
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "intent.confidence_bajo=0.46"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "atencion_cliente",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "pagos",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 575.073,
+      "request_id": "req_01a0d08dcef2739d8565816ebca273f7",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-040",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "atencion_cliente",
+        "expected_intent": "solicitud",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "atencion_cliente",
+          "confidence": 0.99,
+          "choice": "atencion_cliente",
+          "probabilities": {
+            "atencion_cliente": 1.0,
+            "tecnologia": 0.0,
+            "otro": 0.0,
+            "rrhh": 0.0,
+            "pagos": 0.0,
+            "ventas": 0.0,
+            "seguridad": 0.0,
+            "logistica": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "solicitud",
+          "confidence": 1.0,
+          "choice": "solicitud",
+          "probabilities": {
+            "reclamo": 0.0,
+            "otro": 0.0,
+            "consulta": 0.0,
+            "retroalimentacion": 0.0,
+            "incidencia": 0.0,
+            "solicitud": 1.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.47,
+          "confidence": 0.53,
+          "score": 0.47,
+          "probabilities": {
+            "0": 0.6,
+            "1": 0.33,
+            "2": 0.07,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.11,
+          "noul": 0.11
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.11,
+          "noul": 0.11
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.09,
+          "noul": 0.09
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "standard_action",
+          "confidence": 0.94,
+          "choice": "standard_action",
+          "probabilities": {
+            "no_action": 0.0,
+            "immediate_action": 0.0,
+            "standard_action": 0.96,
+            "clarification": 0.04
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        }
+      ],
+      "route": "accept",
+      "reasons": [
+        "ruteo_por_umbral"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "atencion_cliente",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "tecnologia",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 593.589,
+      "request_id": "req_01a0d08dcf1d7987afeffd1460ec022c",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-041",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "atencion_cliente",
+        "expected_intent": "reclamo",
+        "expected_urgency": "high",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "atencion_cliente",
+          "confidence": 0.94,
+          "choice": "atencion_cliente",
+          "probabilities": {
+            "seguridad": 0.0,
+            "rrhh": 0.0,
+            "logistica": 0.0,
+            "tecnologia": 0.0,
+            "atencion_cliente": 0.95,
+            "pagos": 0.0,
+            "otro": 0.05,
+            "ventas": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "reclamo",
+          "confidence": 0.96,
+          "choice": "reclamo",
+          "probabilities": {
+            "retroalimentacion": 0.0,
+            "otro": 0.0,
+            "consulta": 0.0,
+            "solicitud": 0.0,
+            "reclamo": 0.97,
+            "incidencia": 0.03
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 1.79,
+          "confidence": 0.79,
+          "score": 1.79,
+          "probabilities": {
+            "0": 0.0,
+            "1": 0.21,
+            "2": 0.79,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.92,
+          "noul": 0.92
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.09,
+          "noul": 0.09
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.99,
+          "choice": "clarification",
+          "probabilities": {
+            "clarification": 0.99,
+            "standard_action": 0.01,
+            "no_action": 0.0,
+            "immediate_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "is_ambiguous.noul=0.92",
+        "needs_clarification",
+        "urgency.nivel=2"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "atencion_cliente",
+        "priority": "high",
+        "area_runner_up": {
+          "choice": "otro",
+          "probability": 0.05
+        },
+        "area_margin": 0.9,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 675.652,
+      "request_id": "req_01a0d08dd11978ddafa2e5118a39703c",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-042",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "atencion_cliente",
+        "expected_intent": "consulta",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "clarification",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "atencion_cliente",
+          "confidence": 0.95,
+          "choice": "atencion_cliente",
+          "probabilities": {
+            "atencion_cliente": 0.96,
+            "logistica": 0.0,
+            "pagos": 0.0,
+            "ventas": 0.0,
+            "otro": 0.04,
+            "tecnologia": 0.0,
+            "rrhh": 0.0,
+            "seguridad": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "consulta",
+          "confidence": 0.82,
+          "choice": "consulta",
+          "probabilities": {
+            "consulta": 0.85,
+            "incidencia": 0.0,
+            "otro": 0.0,
+            "retroalimentacion": 0.0,
+            "reclamo": 0.0,
+            "solicitud": 0.15
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.05,
+          "confidence": 0.95,
+          "score": 0.05,
+          "probabilities": {
+            "0": 0.95,
+            "1": 0.05,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.9,
+          "noul": 0.9
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.06,
+          "noul": 0.06
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 1.0,
+          "choice": "clarification",
+          "probabilities": {
+            "immediate_action": 0.0,
+            "standard_action": 0.0,
+            "no_action": 0.0,
+            "clarification": 1.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "is_ambiguous.noul=0.9",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "atencion_cliente",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "otro",
+          "probability": 0.04
+        },
+        "area_margin": 0.92,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 562.395,
+      "request_id": "req_01a0d08dd1307a479ac4df9d35711f78",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-043",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "atencion_cliente",
+        "expected_intent": "solicitud",
+        "expected_urgency": "medium",
+        "expected_human": true,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "atencion_cliente",
+          "confidence": 0.93,
+          "choice": "atencion_cliente",
+          "probabilities": {
+            "logistica": 0.0,
+            "rrhh": 0.0,
+            "otro": 0.06,
+            "tecnologia": 0.0,
+            "pagos": 0.0,
+            "atencion_cliente": 0.94,
+            "seguridad": 0.0,
+            "ventas": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "solicitud",
+          "confidence": 1.0,
+          "choice": "solicitud",
+          "probabilities": {
+            "retroalimentacion": 0.0,
+            "incidencia": 0.0,
+            "solicitud": 1.0,
+            "reclamo": 0.0,
+            "otro": 0.0,
+            "consulta": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.29,
+          "confidence": 0.71,
+          "score": 0.29,
+          "probabilities": {
+            "0": 0.72,
+            "1": 0.27,
+            "2": 0.01,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.83,
+          "noul": 0.83
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.91,
+          "noul": 0.91
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.97,
+          "choice": "clarification",
+          "probabilities": {
+            "no_action": 0.0,
+            "clarification": 0.98,
+            "standard_action": 0.02,
+            "immediate_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "is_ambiguous.noul=0.83",
+        "needs_specialist.noul=0.91",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "atencion_cliente",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "otro",
+          "probability": 0.06
+        },
+        "area_margin": 0.88,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 535.376,
+      "request_id": "req_01a0d08dd1697911b42e677eaf497b51",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-044",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "atencion_cliente",
+        "expected_intent": "reclamo",
+        "expected_urgency": "high",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "atencion_cliente",
+          "confidence": 0.99,
+          "choice": "atencion_cliente",
+          "probabilities": {
+            "otro": 0.01,
+            "tecnologia": 0.0,
+            "rrhh": 0.0,
+            "pagos": 0.0,
+            "seguridad": 0.0,
+            "ventas": 0.0,
+            "logistica": 0.0,
+            "atencion_cliente": 0.99
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "reclamo",
+          "confidence": 0.69,
+          "choice": "reclamo",
+          "probabilities": {
+            "reclamo": 0.75,
+            "consulta": 0.0,
+            "solicitud": 0.0,
+            "otro": 0.0,
+            "incidencia": 0.25,
+            "retroalimentacion": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 1.94,
+          "confidence": 0.94,
+          "score": 1.94,
+          "probabilities": {
+            "0": 0.0,
+            "1": 0.06,
+            "2": 0.94,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.37,
+          "noul": 0.37
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.11,
+          "noul": 0.11
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "standard_action",
+          "confidence": 0.47,
+          "choice": "standard_action",
+          "probabilities": {
+            "immediate_action": 0.0,
+            "no_action": 0.0,
+            "standard_action": 0.6,
+            "clarification": 0.4
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "intent.confidence_media=0.69",
+        "urgency.nivel=2"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "atencion_cliente",
+        "priority": "high",
+        "area_runner_up": {
+          "choice": "otro",
+          "probability": 0.01
+        },
+        "area_margin": 0.98,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 518.335,
+      "request_id": "req_01a0d08dd1b47d1b819336338a95c31a",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-045",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "atencion_cliente",
+        "expected_intent": "consulta",
+        "expected_urgency": "medium",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "atencion_cliente",
+          "confidence": 0.92,
+          "choice": "atencion_cliente",
+          "probabilities": {
+            "seguridad": 0.0,
+            "ventas": 0.0,
+            "logistica": 0.0,
+            "atencion_cliente": 0.93,
+            "tecnologia": 0.0,
+            "otro": 0.07,
+            "rrhh": 0.0,
+            "pagos": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "consulta",
+          "confidence": 0.76,
+          "choice": "consulta",
+          "probabilities": {
+            "retroalimentacion": 0.0,
+            "incidencia": 0.0,
+            "reclamo": 0.0,
+            "consulta": 0.8,
+            "otro": 0.0,
+            "solicitud": 0.2
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.35,
+          "confidence": 0.65,
+          "score": 0.35,
+          "probabilities": {
+            "0": 0.66,
+            "1": 0.34,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.18,
+          "noul": 0.18
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "standard_action",
+          "confidence": 0.55,
+          "choice": "standard_action",
+          "probabilities": {
+            "no_action": 0.01,
+            "clarification": 0.32,
+            "standard_action": 0.67,
+            "immediate_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        }
+      ],
+      "route": "accept",
+      "reasons": [
+        "ruteo_por_umbral"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "atencion_cliente",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "otro",
+          "probability": 0.07
+        },
+        "area_margin": 0.86,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 597.594,
+      "request_id": "req_01a0d08dd3627a9f91b2164b30413d72",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-046",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "rrhh",
+        "expected_intent": "consulta",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "rrhh",
+          "confidence": 0.95,
+          "choice": "rrhh",
+          "probabilities": {
+            "seguridad": 0.0,
+            "ventas": 0.0,
+            "logistica": 0.0,
+            "atencion_cliente": 0.01,
+            "tecnologia": 0.0,
+            "rrhh": 0.95,
+            "otro": 0.04,
+            "pagos": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "consulta",
+          "confidence": 0.88,
+          "choice": "consulta",
+          "probabilities": {
+            "retroalimentacion": 0.0,
+            "incidencia": 0.0,
+            "consulta": 0.9,
+            "reclamo": 0.0,
+            "solicitud": 0.1,
+            "otro": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.01,
+          "confidence": 0.99,
+          "score": 0.01,
+          "probabilities": {
+            "0": 1.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.15,
+          "noul": 0.15
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.05,
+          "noul": 0.05
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.63,
+          "choice": "clarification",
+          "probabilities": {
+            "no_action": 0.06,
+            "clarification": 0.73,
+            "standard_action": 0.21,
+            "immediate_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        }
+      ],
+      "route": "accept",
+      "reasons": [
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "rrhh",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "otro",
+          "probability": 0.04
+        },
+        "area_margin": 0.91,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 544.416,
+      "request_id": "req_01a0d08dd3817b3a895b0b975e5702b0",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-047",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "rrhh",
+        "expected_intent": "solicitud",
+        "expected_urgency": "medium",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "accept"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "rrhh",
+          "confidence": 0.97,
+          "choice": "rrhh",
+          "probabilities": {
+            "pagos": 0.0,
+            "atencion_cliente": 0.01,
+            "seguridad": 0.0,
+            "otro": 0.02,
+            "tecnologia": 0.0,
+            "logistica": 0.0,
+            "rrhh": 0.97,
+            "ventas": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "solicitud",
+          "confidence": 1.0,
+          "choice": "solicitud",
+          "probabilities": {
+            "otro": 0.0,
+            "solicitud": 1.0,
+            "incidencia": 0.0,
+            "retroalimentacion": 0.0,
+            "consulta": 0.0,
+            "reclamo": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 1.04,
+          "confidence": 0.87,
+          "score": 1.04,
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.86,
+            "2": 0.09,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.54,
+          "noul": 0.54
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.14,
+          "noul": 0.14
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.08,
+          "noul": 0.08
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.91,
+          "choice": "clarification",
+          "probabilities": {
+            "standard_action": 0.07,
+            "immediate_action": 0.0,
+            "clarification": 0.93,
+            "no_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        }
+      ],
+      "route": "accept",
+      "reasons": [
+        "is_ambiguous.incertidumbre=0.54",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "rrhh",
+        "priority": "normal",
+        "area_runner_up": {
+          "choice": "otro",
+          "probability": 0.02
+        },
+        "area_margin": 0.95,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 555.694,
+      "request_id": "req_01a0d08dd39c7898a3c274ad95ee51b2",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-048",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "rrhh",
+        "expected_intent": "solicitud",
+        "expected_urgency": "low",
+        "expected_human": true,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "clarification",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "rrhh",
+          "confidence": 0.42,
+          "choice": "rrhh",
+          "probabilities": {
+            "seguridad": 0.0,
+            "atencion_cliente": 0.4,
+            "logistica": 0.01,
+            "ventas": 0.0,
+            "tecnologia": 0.0,
+            "otro": 0.09,
+            "rrhh": 0.5,
+            "pagos": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "consulta",
+          "confidence": 0.47,
+          "choice": "consulta",
+          "probabilities": {
+            "retroalimentacion": 0.0,
+            "incidencia": 0.02,
+            "reclamo": 0.21,
+            "consulta": 0.56,
+            "solicitud": 0.21,
+            "otro": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.41,
+          "confidence": 0.59,
+          "score": 0.41,
+          "probabilities": {
+            "0": 0.6,
+            "1": 0.4,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.88,
+          "noul": 0.88
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.3,
+          "noul": 0.3
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.12,
+          "noul": 0.12
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "clarification",
+          "confidence": 0.97,
+          "choice": "clarification",
+          "probabilities": {
+            "no_action": 0.0,
+            "clarification": 0.97,
+            "standard_action": 0.03,
+            "immediate_action": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "area.confidence_bajo=0.42",
+        "intent.confidence_bajo=0.47",
+        "is_ambiguous.noul=0.88",
+        "is_contradictory.incertidumbre=0.3",
+        "needs_clarification"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "rrhh",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "atencion_cliente",
+          "probability": 0.4
+        },
+        "area_margin": 0.1,
+        "needs_clarification": true,
+        "technical_repro_low": false
+      },
+      "latency_ms": 552.511,
+      "request_id": "req_01a0d08dd3c47663b8bb9be8d3115c41",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-049",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "otro",
+        "expected_intent": "otro",
+        "expected_urgency": "low",
+        "expected_human": true,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "no_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "otro",
+          "confidence": 1.0,
+          "choice": "otro",
+          "probabilities": {
+            "logistica": 0.0,
+            "tecnologia": 0.0,
+            "ventas": 0.0,
+            "otro": 1.0,
+            "rrhh": 0.0,
+            "atencion_cliente": 0.0,
+            "pagos": 0.0,
+            "seguridad": 0.0
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "otro",
+          "confidence": 0.99,
+          "choice": "otro",
+          "probabilities": {
+            "incidencia": 0.0,
+            "otro": 0.99,
+            "solicitud": 0.0,
+            "consulta": 0.0,
+            "retroalimentacion": 0.01,
+            "reclamo": 0.0
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.0,
+          "confidence": 1.0,
+          "score": 0.0,
+          "probabilities": {
+            "0": 1.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.77,
+          "noul": 0.77
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.03,
+          "noul": 0.03
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "no_action",
+          "confidence": 1.0,
+          "choice": "no_action",
+          "probabilities": {
+            "no_action": 1.0,
+            "standard_action": 0.0,
+            "immediate_action": 0.0,
+            "clarification": 0.0
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "area_o_intent_otro",
+        "is_ambiguous.noul=0.77",
+        "actionability=no_action"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "otro",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "logistica",
+          "probability": 0.0
+        },
+        "area_margin": 1.0,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 547.772,
+      "request_id": "req_01a0d08dd5a47cfa88c15a13a86a7d72",
+      "error_code": null
+    },
+    {
+      "row_id": "v6-row-050",
+      "mock": false,
+      "model": "jev-1.13.0",
+      "prompt_sha256": "c9e704f88d4842864be1232d32d534e9ce2647c2ec36c1bdaf7906e0b0529c22",
+      "status": "ok",
+      "expected": {
+        "expected_area": "otro",
+        "expected_intent": "consulta",
+        "expected_urgency": "low",
+        "expected_human": false,
+        "expected_security_legal": false,
+        "expected_refund": false,
+        "expected_actionability": "standard_action",
+        "expected_technical_repro": false,
+        "expected_route": "review"
+      },
+      "judgments": [
+        {
+          "question_id": "area",
+          "kind": "choice",
+          "value": "atencion_cliente",
+          "confidence": 0.49,
+          "choice": "atencion_cliente",
+          "probabilities": {
+            "logistica": 0.0,
+            "ventas": 0.0,
+            "rrhh": 0.0,
+            "atencion_cliente": 0.55,
+            "pagos": 0.0,
+            "seguridad": 0.0,
+            "tecnologia": 0.0,
+            "otro": 0.45
+          }
+        },
+        {
+          "question_id": "intent",
+          "kind": "choice",
+          "value": "consulta",
+          "confidence": 0.99,
+          "choice": "consulta",
+          "probabilities": {
+            "solicitud": 0.01,
+            "retroalimentacion": 0.0,
+            "reclamo": 0.0,
+            "otro": 0.0,
+            "incidencia": 0.0,
+            "consulta": 0.99
+          }
+        },
+        {
+          "question_id": "urgency",
+          "kind": "score",
+          "value": 0.0,
+          "confidence": 1.0,
+          "score": 0.0,
+          "probabilities": {
+            "0": 1.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0
+          }
+        },
+        {
+          "question_id": "is_ambiguous",
+          "kind": "noul",
+          "value": 0.13,
+          "noul": 0.13
+        },
+        {
+          "question_id": "is_contradictory",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "needs_specialist",
+          "kind": "noul",
+          "value": 0.04,
+          "noul": 0.04
+        },
+        {
+          "question_id": "security_legal_risk",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "refund_or_replacement",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        },
+        {
+          "question_id": "actionability",
+          "kind": "choice",
+          "value": "standard_action",
+          "confidence": 0.58,
+          "choice": "standard_action",
+          "probabilities": {
+            "no_action": 0.09,
+            "standard_action": 0.6799999999999999,
+            "immediate_action": 0.0,
+            "clarification": 0.23
+          }
+        },
+        {
+          "question_id": "technical_repro",
+          "kind": "noul",
+          "value": 0.02,
+          "noul": 0.02
+        }
+      ],
+      "route": "review",
+      "reasons": [
+        "area.confidence_bajo=0.49"
+      ],
+      "computed": {
+        "local_pii_detected": false,
+        "destination": "atencion_cliente",
+        "priority": "low",
+        "area_runner_up": {
+          "choice": "otro",
+          "probability": 0.45
+        },
+        "area_margin": 0.1,
+        "needs_clarification": false,
+        "technical_repro_low": false
+      },
+      "latency_ms": 725.751,
+      "request_id": "req_01a0d08dd5cd7732b5f1c45c23712365",
+      "error_code": null
+    }
+  ]
+}
